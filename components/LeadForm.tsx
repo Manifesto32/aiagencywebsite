@@ -115,7 +115,7 @@ const LeadForm: React.FC = () => {
             {/* Qualifying Questions Section */}
             <div>
               <h3 className="text-sm font-black text-blue-600 uppercase tracking-widest mb-6 border-b border-slate-100 pb-2">
-                Step 2: Business Qualification
+                Step 2: Let's Get to Know Your Goals
               </h3>
               <div className="space-y-6">
                 <div>
