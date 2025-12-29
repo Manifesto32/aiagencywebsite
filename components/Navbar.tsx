@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { GHL_CONFIG } from '../App';
 
@@ -24,6 +23,7 @@ const Navbar: React.FC = () => {
           <div>
             <a 
               href={GHL_CONFIG.formUrl}
+              onClick={(e) => e.preventDefault()}
               className="ghl-cta-button btn-blue px-5 py-2.5 rounded-full text-white text-sm font-semibold inline-flex items-center"
             >
               Get Started Now →

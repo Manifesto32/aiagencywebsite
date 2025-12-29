@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   BarChart3, 
@@ -200,6 +199,7 @@ const StrategicAdvertising: React.FC = () => {
                     <span className="text-[8px] font-bold text-slate-400 uppercase">meta-lead-form</span>
                     <a 
                       href={GHL_CONFIG.formUrl}
+                      onClick={(e) => e.preventDefault()}
                       className="ghl-cta-button bg-blue-600 text-white text-[8px] font-bold px-3 py-1 rounded inline-block"
                     >
                       Get Free Valuation
@@ -252,6 +252,7 @@ const StrategicAdvertising: React.FC = () => {
                 <div className="mt-4 flex justify-center">
                   <a 
                     href={GHL_CONFIG.formUrl}
+                    onClick={(e) => e.preventDefault()}
                     className="ghl-cta-button px-4 py-1.5 bg-blue-600 rounded-full text-[9px] text-white font-bold uppercase tracking-wider shadow-sm inline-block"
                   >
                     Next Step

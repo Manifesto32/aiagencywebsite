@@ -1,4 +1,3 @@
-
 import { GoogleGenAI } from "@google/genai";
 import React from 'react';
 import Navbar from './components/Navbar';
@@ -23,22 +22,11 @@ export const GHL_CONFIG = {
   // 2. THE SUBDOMAIN YOU CREATED
   subdomainPrefix: "aiagencywebs",
 
-  // 3. THE FORM SOURCE (From your GHL shared link)
+  // 3. THE FORM ID
   formId: "CZBgH0rz9dpgHKrOhRVh",
 
-  // 4. THE FALLBACK (Set to 'true' to make all buttons scroll to the embedded form)
-  useAnchorFallback: true,
-
-  // Calculated URL Helper
-  get formUrl() {
-    if (this.useAnchorFallback) return "#getting-started";
-    return `https://api.leadconnectorhq.com/widget/form/${this.formId}`;
-  },
-  
-  // Direct Link for the iframe embed
-  get embedUrl() {
-    return `https://api.leadconnectorhq.com/widget/form/${this.formId}`;
-  },
+  // 4. Triggering the GHL Popup script (using # and preventing default in components)
+  formUrl: "#",
   
   buttonText: "Start Booking More Listings",
 };

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ShieldCheck, Cpu, FastForward } from 'lucide-react';
 import { GHL_CONFIG } from '../App';
@@ -23,6 +22,7 @@ const CTABlock: React.FC = () => {
             <div className="mb-12">
               <a 
                 href={GHL_CONFIG.formUrl}
+                onClick={(e) => e.preventDefault()}
                 className="ghl-cta-button btn-blue px-10 py-5 rounded-full text-white text-xl font-bold inline-block shadow-xl shadow-blue-900/40"
               >
                 Claim The AI Appointment System Now →

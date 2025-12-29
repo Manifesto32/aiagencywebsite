@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, CheckCircle, MessageSquare, Calendar, Instagram, Facebook } from 'lucide-react';
 import { GHL_CONFIG } from '../App';
@@ -19,6 +18,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
               <a 
                 href={GHL_CONFIG.formUrl}
+                onClick={(e) => e.preventDefault()}
                 className="ghl-cta-button btn-blue w-full sm:w-auto px-8 py-4 rounded-full text-white text-lg font-bold shadow-lg shadow-blue-200"
               >
                 {GHL_CONFIG.buttonText} →

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { GHL_CONFIG } from '../App';
 import { ClipboardList, Rocket, BarChart } from 'lucide-react';
@@ -48,21 +47,14 @@ const GettingStarted: React.FC = () => {
             Our proven 3-phase roadmap ensures your agency's AI engine is built for scale, compliance, and consistent revenue.
           </p>
           
-          {/* The "White Block" container classes have been removed for a seamless look */}
-          <div className="mb-20 max-w-3xl mx-auto overflow-hidden">
-             <div className="p-0">
-               <iframe 
-                src={GHL_CONFIG.embedUrl} 
-                className="w-full min-h-[1110px] border-none"
-                id={`inline-${GHL_CONFIG.formId}`}
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-form-name="Onboarding Form"
-                data-height="1109"
-                data-form-id={GHL_CONFIG.formId}
-                title="Onboarding Form"
-               />
-             </div>
+          <div className="flex justify-center mb-24">
+            <a 
+              href={GHL_CONFIG.formUrl}
+              onClick={(e) => e.preventDefault()}
+              className="ghl-cta-button btn-blue px-10 py-5 rounded-full text-white text-xl font-bold shadow-xl shadow-blue-200"
+            >
+              Start Phase 1 Discovery Now →
+            </a>
           </div>
         </div>
 
