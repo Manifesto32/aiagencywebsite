@@ -1,4 +1,5 @@
 
+import { GoogleGenAI } from "@google/genai";
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -13,24 +14,30 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
 /**
- * GHL_CONFIG: The single source of truth for your GoHighLevel integration.
+ * GHL_CONFIG: The central hub for your GoHighLevel connection.
  */
 export const GHL_CONFIG = {
-  /**
-   * YOUR NEW GHL SUBDOMAIN:
-   * Based on your screenshot, your GHL content will live at:
-   * https://aiagencywebs.[YOUR-ROOT-DOMAIN].com
-   * 
-   * REPLACE 'YOURDOMAIN.com' with your actual domain below.
-   */
-  ghlSubdomain: "aiagencywebs.bloomlinkai.com", // Change this to your actual verified domain
+  // 1. YOUR CUSTOM DOMAIN
+  rootDomain: "bloomlinkaiagency.com", 
   
-  // The specific path to your form or funnel page in GHL
-  formPath: "/start", 
+  // 2. THE SUBDOMAIN YOU CREATED
+  subdomainPrefix: "aiagencywebs",
 
-  // Calculated URL
+  // 3. THE FORM SOURCE (From your GHL shared link)
+  formId: "CZBgH0rz9dpgHKrOhRVh",
+
+  // 4. THE FALLBACK (Set to 'true' to make all buttons scroll to the embedded form)
+  useAnchorFallback: true,
+
+  // Calculated URL Helper
   get formUrl() {
-    return `https://${this.ghlSubdomain}${this.formPath}`;
+    if (this.useAnchorFallback) return "#getting-started";
+    return `https://api.leadconnectorhq.com/widget/form/${this.formId}`;
+  },
+  
+  // Direct Link for the iframe embed
+  get embedUrl() {
+    return `https://api.leadconnectorhq.com/widget/form/${this.formId}`;
   },
   
   buttonText: "Start Booking More Listings",
@@ -38,7 +45,7 @@ export const GHL_CONFIG = {
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col selection:bg-blue-100 selection:text-blue-900">
       <Navbar />
       <main>
         <Hero />
