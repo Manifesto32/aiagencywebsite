@@ -15,10 +15,10 @@ const LeadForm: React.FC = () => {
     city: '',
     state: '',
     postalCode: '',
-    source: 'Instagram Ads',
-    interest: 'Paid Ad Management',
-    adSpend: 'Not currently running ads',
-    timeline: 'Immediately',
+    source: '',
+    interest: '',
+    adSpend: '',
+    timeline: '',
     challenge: ''
   });
 
@@ -51,8 +51,7 @@ const LeadForm: React.FC = () => {
     };
 
     try {
-      // Removing no-cors to allow application/json header to be sent properly
-      const response = await fetch(GHL_WEBHOOK_URL, {
+      await fetch(GHL_WEBHOOK_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,14 +59,9 @@ const LeadForm: React.FC = () => {
         },
         body: JSON.stringify(payload),
       });
-      
-      // Even if the browser reports a CORS warning, the POST request usually completes 
-      // on the server side with GHL webhooks.
       setIsSubmitted(true);
     } catch (error) {
       console.error("Submission error:", error);
-      // We show success anyway because the webhook is a "fire and forget" 
-      // and often triggers correctly even if the browser blocks the response.
       setIsSubmitted(true);
     } finally {
       setIsSubmitting(false);
@@ -241,13 +235,15 @@ const LeadForm: React.FC = () => {
               </h3>
               <div className="space-y-6">
                 <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">How did you hear about us?</label>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">How did you hear about us? *</label>
                   <select 
+                    required
                     name="source"
                     value={formData.source}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 transition-all outline-none bg-white"
                   >
+                    <option value="" disabled>Please select...</option>
                     <option>Instagram Ads</option>
                     <option>Facebook Ads</option>
                     <option>Referral</option>
@@ -256,13 +252,15 @@ const LeadForm: React.FC = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">What interests you most?</label>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">What interests you most? *</label>
                   <select 
+                    required
                     name="interest"
                     value={formData.interest}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 transition-all outline-none bg-white"
                   >
+                    <option value="" disabled>Please select...</option>
                     <option>Paid Ad Management</option>
                     <option>AI Appointment Setter</option>
                     <option>Paid Ad Management & AI Appointment Setter</option>
@@ -270,13 +268,15 @@ const LeadForm: React.FC = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">Current monthly advertising spend?</label>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">Current monthly advertising spend? *</label>
                   <select 
+                    required
                     name="adSpend"
                     value={formData.adSpend}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 transition-all outline-none bg-white"
                   >
+                    <option value="" disabled>Please select...</option>
                     <option>Not currently running ads</option>
                     <option>Under $1,000</option>
                     <option>$1,000 - $3,000</option>
@@ -285,13 +285,15 @@ const LeadForm: React.FC = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">How soon are you looking to implement a growth system?</label>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">How soon are you looking to implement a growth system? *</label>
                   <select 
+                    required
                     name="timeline"
                     value={formData.timeline}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 transition-all outline-none bg-white"
                   >
+                    <option value="" disabled>Please select...</option>
                     <option>Immediately</option>
                     <option>Within 30 days</option>
                     <option>Within 60 days</option>
