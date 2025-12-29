@@ -197,13 +197,12 @@ const StrategicAdvertising: React.FC = () => {
                   </p>
                   <div className="flex items-center justify-between px-3 py-1.5 bg-slate-50 rounded border border-slate-100">
                     <span className="text-[8px] font-bold text-slate-400 uppercase">meta-lead-form</span>
-                    <a 
-                      href={GHL_CONFIG.formUrl}
-                      onClick={(e) => e.preventDefault()}
-                      className="ghl-cta-button bg-blue-600 text-white text-[8px] font-bold px-3 py-1 rounded inline-block"
+                    <button 
+                      className="bg-blue-600 text-white text-[8px] font-bold px-3 py-1 rounded inline-block"
+                      disabled
                     >
                       Get Free Valuation
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -250,13 +249,9 @@ const StrategicAdvertising: React.FC = () => {
                 </div>
                 
                 <div className="mt-4 flex justify-center">
-                  <a 
-                    href={GHL_CONFIG.formUrl}
-                    onClick={(e) => e.preventDefault()}
-                    className="ghl-cta-button px-4 py-1.5 bg-blue-600 rounded-full text-[9px] text-white font-bold uppercase tracking-wider shadow-sm inline-block"
-                  >
+                  <button className="px-4 py-1.5 bg-blue-600 rounded-full text-[9px] text-white font-bold uppercase tracking-wider shadow-sm inline-block" disabled>
                     Next Step
-                  </a>
+                  </button>
                 </div>
               </div>
 

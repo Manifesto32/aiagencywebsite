@@ -25,10 +25,10 @@ export const GHL_CONFIG = {
   // 3. THE FORM ID
   formId: "CZBgH0rz9dpgHKrOhRVh",
 
-  // 4. Triggering the GHL Popup script (using # and preventing default in components)
-  formUrl: "#",
+  // 4. URL to anchor section
+  formUrl: "#onboarding-form",
   
-  buttonText: "Start Booking More Listings",
+  buttonText: "Start booking more listings",
 };
 
 const App: React.FC = () => {
