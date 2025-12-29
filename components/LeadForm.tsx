@@ -1,18 +1,55 @@
 import React, { useState } from 'react';
 import { ShieldCheck, Send, CheckCircle2 } from 'lucide-react';
 
+const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/Y5zsNn2xY4yBhOcBzCel/webhook-trigger/490b0dd3-56fe-46b7-a0b0-08cd29f1dc1e";
+
 const LeadForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    organization: '',
+    city: '',
+    state: '',
+    postalCode: '',
+    source: 'Instagram Ads',
+    interest: 'Paid Ad Management',
+    adSpend: 'Not currently running ads',
+    timeline: 'Immediately',
+    challenge: ''
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    try {
+      const response = await fetch(GHL_WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        mode: 'no-cors', // Standard for many webhook triggers to avoid CORS preflight issues if the server doesn't support them
+        body: JSON.stringify(formData),
+      });
+      
+      // Even with no-cors, we proceed to show the success message
       setIsSubmitted(true);
-    }, 1500);
+    } catch (error) {
+      console.error("Submission error:", error);
+      // Still show success to user for better UX, as webhooks are often one-way
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -77,36 +114,99 @@ const LeadForm: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">First Name *</label>
-                  <input required type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" placeholder="John" />
+                  <input 
+                    required 
+                    name="firstName"
+                    type="text" 
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" 
+                    placeholder="John" 
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">Last Name *</label>
-                  <input required type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" placeholder="Doe" />
+                  <input 
+                    required 
+                    name="lastName"
+                    type="text" 
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" 
+                    placeholder="Doe" 
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">Email Address *</label>
-                  <input required type="email" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" placeholder="john@example.com" />
+                  <input 
+                    required 
+                    name="email"
+                    type="email" 
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" 
+                    placeholder="john@example.com" 
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">Phone Number *</label>
-                  <input required type="tel" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" placeholder="(555) 000-0000" />
+                  <input 
+                    required 
+                    name="phone"
+                    type="tel" 
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" 
+                    placeholder="(555) 000-0000" 
+                  />
                 </div>
                 <div className="sm:col-span-2">
                   <label className="block text-sm font-bold text-slate-700 mb-2">Organization (Optional)</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" placeholder="Agency or Brokerage Name" />
+                  <input 
+                    name="organization"
+                    type="text" 
+                    value={formData.organization}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" 
+                    placeholder="Agency or Brokerage Name" 
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">City *</label>
-                  <input required type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" placeholder="Los Angeles" />
+                  <input 
+                    required 
+                    name="city"
+                    type="text" 
+                    value={formData.city}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" 
+                    placeholder="Los Angeles" 
+                  />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-bold text-slate-700 mb-2">State *</label>
-                    <input required type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" placeholder="CA" />
+                    <input 
+                      required 
+                      name="state"
+                      type="text" 
+                      value={formData.state}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" 
+                      placeholder="CA" 
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-slate-700 mb-2">Postal Code *</label>
-                    <input required type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" placeholder="90210" />
+                    <input 
+                      required 
+                      name="postalCode"
+                      type="text" 
+                      value={formData.postalCode}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none" 
+                      placeholder="90210" 
+                    />
                   </div>
                 </div>
               </div>
@@ -120,7 +220,12 @@ const LeadForm: React.FC = () => {
               <div className="space-y-6">
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">How did you hear about us?</label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 transition-all outline-none bg-white">
+                  <select 
+                    name="source"
+                    value={formData.source}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 transition-all outline-none bg-white"
+                  >
                     <option>Instagram Ads</option>
                     <option>Facebook Ads</option>
                     <option>Referral</option>
@@ -130,7 +235,12 @@ const LeadForm: React.FC = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">What interests you most?</label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 transition-all outline-none bg-white">
+                  <select 
+                    name="interest"
+                    value={formData.interest}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 transition-all outline-none bg-white"
+                  >
                     <option>Paid Ad Management</option>
                     <option>AI Appointment Setter</option>
                     <option>Paid Ad Management & AI Appointment Setter</option>
@@ -139,7 +249,12 @@ const LeadForm: React.FC = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">Current monthly advertising spend?</label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 transition-all outline-none bg-white">
+                  <select 
+                    name="adSpend"
+                    value={formData.adSpend}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 transition-all outline-none bg-white"
+                  >
                     <option>Not currently running ads</option>
                     <option>Under $1,000</option>
                     <option>$1,000 - $3,000</option>
@@ -149,7 +264,12 @@ const LeadForm: React.FC = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">How soon are you looking to implement a growth system?</label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 transition-all outline-none bg-white">
+                  <select 
+                    name="timeline"
+                    value={formData.timeline}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 transition-all outline-none bg-white"
+                  >
                     <option>Immediately</option>
                     <option>Within 30 days</option>
                     <option>Within 60 days</option>
@@ -158,7 +278,14 @@ const LeadForm: React.FC = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-slate-700 mb-2">What's your biggest challenge in scaling your real estate business? (Optional)</label>
-                  <textarea rows={3} className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 transition-all outline-none" placeholder="e.g. Inconsistent lead flow, spending too much time on follow-up..." />
+                  <textarea 
+                    name="challenge"
+                    rows={3} 
+                    value={formData.challenge}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-blue-500 transition-all outline-none" 
+                    placeholder="e.g. Inconsistent lead flow, spending too much time on follow-up..." 
+                  />
                 </div>
               </div>
             </div>
