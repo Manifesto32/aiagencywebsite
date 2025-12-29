@@ -13,8 +13,8 @@ const Footer: React.FC = () => {
               </div>
               <span className="text-xl font-bold tracking-tight text-white">Bloom Link <span className="text-blue-200">AI Agency</span></span>
             </div>
-            <p className="text-blue-50 max-w-sm mb-6 font-medium leading-relaxed">
-              We create high-converting paid ad campaigns and build AI growth systems that turn those leads into booked appointments—starting with high-intent real estate sellers and buyers.
+            <p className="text-blue-50 max-sm mb-6 font-medium leading-relaxed">
+              We create high-converting paid ad campaigns and AI Appointment Systems that turn those leads into booked appointments—starting with high-intent real estate sellers and buyers.
             </p>
           </div>
           

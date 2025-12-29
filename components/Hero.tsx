@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Phone, CheckCircle, MessageSquare, Calendar, Instagram, Facebook } from 'lucide-react';
+import { GHL_CONFIG } from '../App';
 
 const Hero: React.FC = () => {
   return (
@@ -9,22 +10,22 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6">
-              We Generate Your Leads.<br />
-              Our AI Converts Them Instantly.
+              We Generate Your Real Estate Leads.<br />
+              Our AI Books Appointments Instantly.
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-              We run your Meta & Instagram seller ads, then our AI instantly calls, qualifies, and books listing appointments—24/7, even while you sleep.
+              We run Meta & Instagram ads for real estate agents, then our AI instantly calls, qualifies, and books listing appointments—24/7, even while you sleep.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
               <a 
-                href="#getting-started"
-                className="btn-blue w-full sm:w-auto px-8 py-4 rounded-full text-white text-lg font-bold shadow-lg shadow-blue-200"
+                href={GHL_CONFIG.formUrl}
+                className="ghl-cta-button btn-blue w-full sm:w-auto px-8 py-4 rounded-full text-white text-lg font-bold shadow-lg shadow-blue-200"
               >
-                Start Booking More Listings →
+                {GHL_CONFIG.buttonText} →
               </a>
             </div>
             <div className="flex items-center justify-center lg:justify-start space-x-6 text-sm text-slate-500 font-medium">
-              <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" /> Listing-Focused</span>
+              <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" /> Appointment-Focused</span>
               <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" /> 24/7 AI Coverage</span>
               <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" /> Fully Managed Ads</span>
             </div>
@@ -41,7 +42,7 @@ const Hero: React.FC = () => {
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-white ring-2 ring-white">
                       <Facebook className="w-3 h-3 fill-current" />
                     </div>
-                    <div className="w-6 h-6 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 rounded-full flex items-center justify-center text-white ring-2 ring-white">
+                    <div className="w-6 h-6 bg-gradient-tr from-yellow-400 via-red-500 to-purple-600 rounded-full flex items-center justify-center text-white ring-2 ring-white">
                       <Instagram className="w-3 h-3" />
                     </div>
                   </div>

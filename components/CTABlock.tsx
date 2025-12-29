@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ShieldCheck, Cpu, FastForward } from 'lucide-react';
+import { GHL_CONFIG } from '../App';
 
 const CTABlock: React.FC = () => {
   return (
@@ -21,10 +22,10 @@ const CTABlock: React.FC = () => {
             
             <div className="mb-12">
               <a 
-                href="#getting-started"
-                className="btn-blue px-10 py-5 rounded-full text-white text-xl font-bold inline-block shadow-xl shadow-blue-900/40"
+                href={GHL_CONFIG.formUrl}
+                className="ghl-cta-button btn-blue px-10 py-5 rounded-full text-white text-xl font-bold inline-block shadow-xl shadow-blue-900/40"
               >
-                Claim Your AI System Now →
+                Claim The AI Appointment System Now →
               </a>
             </div>
 

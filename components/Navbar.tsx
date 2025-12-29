@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { GHL_CONFIG } from '../App';
 
 const Navbar: React.FC = () => {
   return (
@@ -16,14 +17,14 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
             <a href="#how-it-works" className="hover:text-[#2563EB] transition-colors">How It Works</a>
             <a href="#benefits" className="hover:text-[#2563EB] transition-colors">Benefits</a>
-            <a href="#getting-started" className="hover:text-[#2563EB] transition-colors">Getting Started</a>
+            <a href="#strategic-ads" className="hover:text-[#2563EB] transition-colors">Strategic Ads</a>
             <a href="#faq" className="hover:text-[#2563EB] transition-colors">FAQ</a>
           </div>
 
           <div>
             <a 
-              href="#getting-started"
-              className="btn-blue px-5 py-2.5 rounded-full text-white text-sm font-semibold inline-flex items-center"
+              href={GHL_CONFIG.formUrl}
+              className="ghl-cta-button btn-blue px-5 py-2.5 rounded-full text-white text-sm font-semibold inline-flex items-center"
             >
               Get Started Now →
             </a>

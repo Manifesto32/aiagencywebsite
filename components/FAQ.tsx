@@ -25,11 +25,11 @@ const faqs = [
   },
   {
     q: "Can I use just the AI Voice Agent without paid ads?",
-    a: "While we offer standalone AI Voice Agent services, we strongly recommend the complete system. Without our optimized paid ad campaigns generating consistent lead flow, we cannot guarantee appointment volume increases. The AI performs best with steady, qualified lead generation."
+    a: "While we offer standalone AI Voice Agent services, we strongly recommend the complete The AI Appointment System. Without our optimized paid ad campaigns generating consistent lead flow, we cannot guarantee appointment volume increases. The AI performs best with steady, qualified lead generation."
   },
   {
     q: "Does it integrate with my CRM?",
-    a: "Yes. We offer native integration with popular platforms including GoHighLevel, Follow Up Boss, kvCORE, and most major real estate CRMs. Custom API integrations are available for proprietary systems."
+    a: "Yes. We offer native integration with popular platforms including GoHighLevel, Follow Up Boss, kvCORE, and most major real estate CRMs. Custom API integrations are available for proprietary The AI Appointment Systems."
   },
   {
     q: "Will this work in my specific market?",
@@ -47,7 +47,7 @@ const FAQ: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-slate-600">Common questions about the Bloom Link AI Agency system.</p>
+          <p className="text-lg text-slate-600">Common questions about the Bloom Link AI Agency AI Appointment System.</p>
         </div>
 
         <div className="space-y-4">

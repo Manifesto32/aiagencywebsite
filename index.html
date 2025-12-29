@@ -4,7 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom Link AI Agency | More Listings, Less Work</title>
+    <title>Bloom Link AI Agency | The AI Appointment System</title>
+    <meta name="description" content="We build AI growth systems for real estate agents. Automate your lead follow-up and book more listings.">
+    
+    <!-- 1. GHL HEADER TRACKING CODE START -->
+    <!-- Go to GHL > Settings > Tracking Code > Head Tracking -->
+    <!-- PASTE HERE -->
+    <!-- 1. GHL HEADER TRACKING CODE END -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +21,6 @@
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
-        .bg-mist-blue {
-            background-color: #F0F9FF;
-        }
-        .text-mist-blue {
-            color: #F0F9FF;
-        }
-        .border-mist-blue {
-            border-color: #F0F9FF;
-        }
         .btn-blue {
             background-color: #2563EB;
             transition: all 0.2s ease-in-out;
@@ -30,7 +28,7 @@
         .btn-blue:hover {
             background-color: #1D4ED8;
             transform: translateY(-1px);
-            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
         }
         @keyframes blob {
             0% { transform: translate(0px, 0px) scale(1); }
@@ -43,6 +41,12 @@
         }
         .animation-delay-2000 {
             animation-delay: 2s;
+        }
+        
+        /* GHL Specific CSS targeting */
+        .ghl-form-embed-container {
+            width: 100%;
+            min-height: 600px;
         }
     </style>
 <script type="importmap">
@@ -61,5 +65,10 @@
 <body class="bg-white text-slate-900">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
+
+    <!-- 2. GHL FOOTER TRACKING CODE START -->
+    <!-- Go to GHL > Settings > Tracking Code > Body Tracking -->
+    <!-- PASTE HERE (e.g. Chat Widget, Pixel, etc) -->
+    <!-- 2. GHL FOOTER TRACKING CODE END -->
 </body>
 </html>

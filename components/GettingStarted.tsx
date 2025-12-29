@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { GHL_CONFIG } from '../App';
 
 const phases = [
   {
@@ -39,9 +40,24 @@ const GettingStarted: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
             Our Strategic Onboarding Process
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Our proven onboarding process ensures your system is built for long-term scalability and consistent results.
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-12">
+            Our proven onboarding process ensures The AI Appointment System is built for long-term scalability and consistent results.
           </p>
+          
+          {/* Optional GHL Form Direct Embed Placeholder */}
+          {GHL_CONFIG.formUrl.startsWith('http') && (
+            <div className="mb-20 max-w-2xl mx-auto bg-white p-2 rounded-3xl shadow-xl border border-blue-100 overflow-hidden">
+               <div className="bg-blue-600 text-white py-3 px-6 text-sm font-bold uppercase tracking-widest">
+                  Secure Onboarding Application
+               </div>
+               {/* This is where you would paste the GHL Iframe code if you want it on-page */}
+               <iframe 
+                src={GHL_CONFIG.formUrl} 
+                style={{ width: '100%', height: '600px', border: 'none' }}
+                title="GHL Form"
+               />
+            </div>
+          )}
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
