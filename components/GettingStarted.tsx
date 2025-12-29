@@ -1,6 +1,5 @@
 import React from 'react';
 import { ClipboardList, Rocket, BarChart } from 'lucide-react';
-import { GHL_CONFIG } from '../App';
 
 const phases = [
   {
@@ -43,12 +42,12 @@ const GettingStarted: React.FC = () => {
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
             Our Strategic Onboarding Process
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-16">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Our proven 3-phase roadmap ensures your agency's AI engine is built for scale, compliance, and consistent revenue.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-24">
+        <div className="grid lg:grid-cols-3 gap-8">
           {phases.map((item, idx) => (
             <div key={idx} className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm relative group hover:shadow-xl transition-all duration-300">
               <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
@@ -68,27 +67,6 @@ const GettingStarted: React.FC = () => {
               </ul>
             </div>
           ))}
-        </div>
-
-        {/* INLINE GHL FORM CONTAINER */}
-        <div id="onboarding-form" className="max-w-4xl mx-auto bg-white rounded-[2.5rem] border border-slate-100 shadow-2xl overflow-hidden p-0 sm:p-2">
-           <iframe
-                src={`https://api.leadconnectorhq.com/widget/form/${GHL_CONFIG.formId}`}
-                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
-                id={`inline-${GHL_CONFIG.formId}`}
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Onboarding Form"
-                data-height="1109"
-                data-layout-iframe-id={`inline-${GHL_CONFIG.formId}`}
-                data-form-id={GHL_CONFIG.formId}
-                title="Onboarding Form"
-            />
         </div>
       </div>
     </section>

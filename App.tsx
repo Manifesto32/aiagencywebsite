@@ -9,6 +9,7 @@ import HowItWorks from './components/HowItWorks';
 import StrategicAdvertising from './components/StrategicAdvertising';
 import GettingStarted from './components/GettingStarted';
 import CTABlock from './components/CTABlock';
+import LeadForm from './components/LeadForm';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
@@ -26,7 +27,7 @@ export const GHL_CONFIG = {
   formId: "CZBgH0rz9dpgHKrOhRVh",
 
   // 4. URL to anchor section
-  formUrl: "#onboarding-form",
+  formUrl: "#initialize-ai",
   
   buttonText: "Start booking more listings",
 };
@@ -44,6 +45,7 @@ const App: React.FC = () => {
         <HearYourFutureAI />
         <GettingStarted />
         <CTABlock />
+        <LeadForm />
         <FAQ />
       </main>
       <Footer />

@@ -8,11 +8,9 @@ import {
   CheckCircle2, 
   XCircle, 
   ArrowRight, 
-  TrendingUp, 
   Monitor,
   Share2,
   Calendar,
-  UserPlus,
   MoreHorizontal,
   Home,
   Tag
@@ -63,7 +61,7 @@ const StrategicAdvertising: React.FC = () => {
           </div>
         </div>
 
-        {/* The Power of Lead Form Optimization - Moved Before Bloom Link Advantage */}
+        {/* The Power of Lead Form Optimization */}
         <div className="bg-white rounded-[3rem] p-8 sm:p-12 mb-24 border border-blue-50 shadow-lg">
           <h3 className="text-2xl font-black text-slate-900 mb-8">The Power of Lead Form Optimization</h3>
           <div className="grid md:grid-cols-2 gap-8">
@@ -111,7 +109,7 @@ const StrategicAdvertising: React.FC = () => {
         </div>
 
         {/* The Bloom Link Advantage - Main Feature Section */}
-        <div className="mb-24">
+        <div className="mb-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-extrabold text-slate-900 mb-4">The Bloom Link Advantage</h3>
           </div>
@@ -143,7 +141,7 @@ const StrategicAdvertising: React.FC = () => {
 
           {/* Three Feature Boxes */}
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Box 1: Strategic Ad Creation - UPDATED MOCKUP */}
+            {/* Box 1: Strategic Ad Creation */}
             <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mr-4">
@@ -152,9 +150,7 @@ const StrategicAdvertising: React.FC = () => {
                 <h4 className="text-xl font-bold text-slate-900">Strategic Ad Creation</h4>
               </div>
               
-              {/* Mockup 2: Seller-Focused Ad Visual */}
               <div className="bg-white border border-slate-100 rounded-xl shadow-lg overflow-hidden mb-6 group/ad">
-                {/* Platform Header */}
                 <div className="flex items-center justify-between p-3 border-b border-slate-50">
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-[10px] text-white font-bold">LE</div>
@@ -166,7 +162,6 @@ const StrategicAdvertising: React.FC = () => {
                   <MoreHorizontal className="w-4 h-4 text-slate-400" />
                 </div>
                 
-                {/* Ad Image with Overlay */}
                 <div className="relative aspect-video bg-slate-100 overflow-hidden">
                   <div className="absolute inset-0 flex">
                     <div className="flex-1 bg-slate-200 flex items-center justify-center">
@@ -178,7 +173,6 @@ const StrategicAdvertising: React.FC = () => {
                     </div>
                   </div>
                   
-                  {/* Badges */}
                   <div className="absolute top-2 left-2 bg-green-500 text-white text-[7px] font-black px-2 py-0.5 rounded shadow-lg uppercase tracking-tight">
                     SOLD for $50K Over Asking
                   </div>
@@ -189,7 +183,6 @@ const StrategicAdvertising: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Ad Content */}
                 <div className="p-3 bg-white">
                   <p className="text-[8px] font-bold text-slate-900 mb-1 leading-tight">What's Your Home Really Worth in 2025?</p>
                   <p className="text-[7px] text-slate-500 mb-3 leading-tight line-clamp-2">
@@ -197,10 +190,7 @@ const StrategicAdvertising: React.FC = () => {
                   </p>
                   <div className="flex items-center justify-between px-3 py-1.5 bg-slate-50 rounded border border-slate-100">
                     <span className="text-[8px] font-bold text-slate-400 uppercase">meta-lead-form</span>
-                    <button 
-                      className="bg-blue-600 text-white text-[8px] font-bold px-3 py-1 rounded inline-block"
-                      disabled
-                    >
+                    <button className="bg-blue-600 text-white text-[8px] font-bold px-3 py-1 rounded inline-block" disabled>
                       Get Free Valuation
                     </button>
                   </div>
@@ -238,11 +228,11 @@ const StrategicAdvertising: React.FC = () => {
                       <div className="w-1 h-1 bg-blue-600 rounded-full"></div>
                     </div>
                   </div>
-                  <div className="p-2 bg-white border border-slate-200 rounded-lg flex items-center justify-between group-hover:border-slate-300">
+                  <div className="p-2 bg-white border border-slate-200 rounded-lg flex items-center justify-between">
                     <span className="text-[9px] font-medium text-slate-500">1-3 Months</span>
                     <div className="w-2.5 h-2.5 rounded-full border border-slate-300"></div>
                   </div>
-                  <div className="p-2 bg-white border border-slate-200 rounded-lg flex items-center justify-between group-hover:border-slate-300">
+                  <div className="p-2 bg-white border border-slate-200 rounded-lg flex items-center justify-between">
                     <span className="text-[9px] font-medium text-slate-500">Just Curious</span>
                     <div className="w-2.5 h-2.5 rounded-full border border-slate-300"></div>
                   </div>
@@ -281,13 +271,12 @@ const StrategicAdvertising: React.FC = () => {
           </div>
         </div>
 
-        {/* Visual Comparison Section - The Strategic Difference */}
-        <div className="mb-24">
+        {/* Visual Comparison Section */}
+        <div className="mt-24">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-extrabold text-slate-900">The Strategic Difference</h3>
           </div>
           <div className="grid md:grid-cols-2 gap-px bg-slate-200 rounded-[2rem] overflow-hidden border border-slate-200 shadow-xl">
-            {/* Left Column: Traditional Approach */}
             <div className="bg-slate-50 p-10">
               <h4 className="text-xl font-bold text-slate-400 mb-8 flex items-center uppercase tracking-widest">
                 Traditional Approach
@@ -306,7 +295,6 @@ const StrategicAdvertising: React.FC = () => {
                 ))}
               </ul>
             </div>
-            {/* Right Column: The Bloom Link System */}
             <div className="bg-white p-10 relative overflow-hidden">
               <div className="absolute top-0 right-0 p-4">
                 <div className="bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter shadow-lg">Proven</div>
@@ -330,36 +318,6 @@ const StrategicAdvertising: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* ROI Section */}
-        <div className="grid md:grid-cols-5 gap-8 items-center">
-          <div className="md:col-span-3">
-            <div className="flex items-center mb-6">
-              <div className="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mr-6">
-                <TrendingUp className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-3xl font-extrabold text-slate-900">Return on Investment</h3>
-            </div>
-            <p className="text-lg text-slate-600 leading-relaxed mb-8">
-              When executed properly, paid advertising with optimized lead forms isn't a cost—it's an investment in predictable growth. Each campaign provides clear tracking of your investment and results. This transparency allows you to scale what works and refine what doesn't.
-            </p>
-          </div>
-          <div className="md:col-span-2 grid grid-cols-2 gap-4">
-            {[
-              { label: 'Reach', icon: Share2 },
-              { label: 'Engagement', icon: Target },
-              { label: 'Leads', icon: UserPlus },
-              { label: 'Appointments', icon: Calendar }
-            ].map((metric, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center shadow-sm">
-                <metric.icon className="w-6 h-6 text-blue-600 mb-3" />
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">{metric.label}</span>
-                <div className="h-1.5 w-8 bg-blue-100 mt-2 rounded-full"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-
       </div>
     </section>
   );
