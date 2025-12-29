@@ -16,12 +16,22 @@ import Footer from './components/Footer';
  * GHL_CONFIG: The single source of truth for your GoHighLevel integration.
  */
 export const GHL_CONFIG = {
-  // Option A: Direct Link to a GHL Form/Funnel (Most Common)
-  formUrl: "#getting-started", 
+  /**
+   * YOUR NEW GHL SUBDOMAIN:
+   * Based on your screenshot, your GHL content will live at:
+   * https://aiagencywebs.[YOUR-ROOT-DOMAIN].com
+   * 
+   * REPLACE 'YOURDOMAIN.com' with your actual domain below.
+   */
+  ghlSubdomain: "aiagencywebs.bloomlinkai.com", // Change this to your actual verified domain
   
-  // Option B: If you use the GHL 'Popup' feature, set this to true
-  // and use 'ghl-popup-trigger' as your class in GHL settings.
-  usePopup: false, 
+  // The specific path to your form or funnel page in GHL
+  formPath: "/start", 
+
+  // Calculated URL
+  get formUrl() {
+    return `https://${this.ghlSubdomain}${this.formPath}`;
+  },
   
   buttonText: "Start Booking More Listings",
 };
