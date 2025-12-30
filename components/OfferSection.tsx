@@ -20,7 +20,7 @@ const OfferSection: React.FC = () => {
             </div>
 
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-[900] text-slate-900 leading-[1.1] mb-10 tracking-tight">
-              Get <span className="text-[#2563EB]">7 Qualified Listing Appointments</span> in <span className="text-[#2563EB]">90 days</span> or We <span className="text-red-600">Work FREE</span> Until You Do
+              Get <span className="text-[#2563EB]">7 Qualified Listing Appointments</span> in <span className="text-[#2563EB]">90 days</span> or We...
             </h2>
 
             <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto font-medium leading-relaxed mb-12">

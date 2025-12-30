@@ -1,14 +1,23 @@
 import React from 'react';
-import Logo from './Logo';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#2563EB] pt-16 pb-8 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="relative bg-[#2563EB] pt-16 pb-8 text-white overflow-hidden">
+      {/* Premium Atmospheric Glows */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-black/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <div className="mb-6">
-              <Logo className="h-12" variant="white" />
+            {/* Text-based branding to replace problematic image logo */}
+            <div className="mb-6 flex flex-col font-garet">
+              <span className="text-white text-2xl sm:text-3xl font-[900] leading-[0.9] tracking-tight whitespace-nowrap">
+                Bloom Link
+              </span>
+              <span className="text-blue-100/90 text-[11px] font-bold uppercase tracking-[0.3em] leading-none mt-2 whitespace-nowrap">
+                AI Agency
+              </span>
             </div>
             <p className="text-blue-50 max-w-sm mb-6 font-medium leading-relaxed">
               We create high-converting Paid Ad Campaigns and Appointment Generation Systems that turn those leads into booked appointments—starting with high-intent real estate sellers and buyers.
