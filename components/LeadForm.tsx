@@ -82,7 +82,7 @@ const LeadForm: React.FC = () => {
                 We've received your request and appreciate you taking the time to share your information with us. Someone from our team will reach out to you within the next 24 business hours to discuss how we can help scale your real estate business.
               </p>
               <p>
-                In the meantime, feel free to explore our website to learn more about how our AI-powered appointment setting system is helping real estate professionals book more qualified listing appointments.
+                In the meantime, feel free to explore our website to learn more about how our Appointment Generation System is helping real estate professionals book more qualified listing appointments.
               </p>
               <p>
                 We look forward to speaking with you soon!
@@ -109,7 +109,7 @@ const LeadForm: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
-            Initialize Your AI Appointment System
+            Initialize Your Appointment Generation System
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-4">
             Complete the form below to secure your territory and start your onboarding process.
@@ -285,7 +285,7 @@ const LeadForm: React.FC = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">How soon are you looking to implement a growth system? *</label>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">How soon are you looking to implement an Appointment Generation System? *</label>
                   <select 
                     required
                     name="timeline"

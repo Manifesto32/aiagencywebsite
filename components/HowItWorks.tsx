@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MousePointerClick, PhoneCall, CalendarCheck2 } from 'lucide-react';
 
@@ -12,7 +11,7 @@ const steps = [
   },
   {
     title: "Step 2: AI Qualifies in Seconds",
-    description: "The moment a lead is submitted, The AI Appointment System triggers an instant call. Our assistant qualifies their motivation and property details, then books the appointment directly into your calendar without you lifting a finger.",
+    description: "The moment a lead is submitted, the Appointment Generation System triggers an instant call. Our assistant qualifies their motivation and property details, then books the appointment directly into your calendar without you lifting a finger.",
     icon: PhoneCall,
     color: "bg-indigo-500",
     glow: "shadow-indigo-200"

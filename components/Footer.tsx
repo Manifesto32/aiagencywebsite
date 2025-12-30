@@ -1,5 +1,5 @@
-
 import React from 'react';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   return (
@@ -7,14 +7,11 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center mb-6">
-              <div className="h-8 w-8 bg-white rounded-lg mr-2 flex items-center justify-center border border-white/20 shadow-sm">
-                <span className="text-[#2563EB] font-bold">B</span>
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">Bloom Link <span className="text-blue-200">AI Agency</span></span>
+            <div className="mb-6">
+              <Logo className="h-12" variant="white" />
             </div>
-            <p className="text-blue-50 max-sm mb-6 font-medium leading-relaxed">
-              We create high-converting paid ad campaigns and AI Appointment Systems that turn those leads into booked appointments—starting with high-intent real estate sellers and buyers.
+            <p className="text-blue-50 max-w-sm mb-6 font-medium leading-relaxed">
+              We create high-converting Paid Ad Campaigns and Appointment Generation Systems that turn those leads into booked appointments—starting with high-intent real estate sellers and buyers.
             </p>
           </div>
           

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CalendarCheck, PhoneIncoming, Infinity, Settings, Megaphone } from 'lucide-react';
 
@@ -36,7 +35,7 @@ const benefitCards = [
   {
     title: "Works Forever on Autopilot",
     icon: Infinity,
-    description: "Set it up once, and The AI Appointment System runs continuously without management.",
+    description: "Set it up once, and the Appointment Generation System runs continuously without management.",
     bullets: [
       "AI learns and improves from every chat",
       "No sick days, vacations, or human error",
@@ -61,7 +60,7 @@ const Benefits: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
-            Your Complete AI Appointment System
+            Your Complete Appointment Generation System
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             From social media ads to qualified appointments in your calendar—we handle the technology, you handle the conversations.

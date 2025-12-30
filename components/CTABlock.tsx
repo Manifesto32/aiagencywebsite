@@ -24,7 +24,7 @@ const CTABlock: React.FC = () => {
                 href={GHL_CONFIG.formUrl}
                 className="btn-blue px-10 py-5 rounded-full text-white text-xl font-bold inline-block shadow-xl shadow-blue-900/40"
               >
-                Claim the AI Appointment system now →
+                Claim the Appointment Generation System now →
               </a>
             </div>
 
