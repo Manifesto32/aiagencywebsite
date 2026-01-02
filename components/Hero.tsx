@@ -36,19 +36,21 @@ const Hero: React.FC = () => {
               
               {/* Step 1: Meta/Instagram Ad Conversion */}
               <div className="relative p-4 rounded-2xl bg-blue-50 border border-blue-100 animate-in fade-in slide-in-from-right-4 duration-700">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex -space-x-1">
-                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-white ring-2 ring-white">
-                      <Facebook className="w-3 h-3 fill-current" />
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex -space-x-1.5">
+                    {/* Facebook Icon */}
+                    <div className="w-7 h-7 bg-[#1877F2] rounded-full flex items-center justify-center text-white ring-2 ring-white shadow-sm">
+                      <Facebook className="w-4 h-4 fill-current" />
                     </div>
-                    <div className="w-6 h-6 bg-gradient-tr from-yellow-400 via-red-500 to-purple-600 rounded-full flex items-center justify-center text-white ring-2 ring-white">
-                      <Instagram className="w-3 h-3" />
+                    {/* Instagram Icon with "Normal Colors" Gradient */}
+                    <div className="w-7 h-7 bg-gradient-to-tr from-[#FFB13D] via-[#DD2A7B] to-[#8134AF] rounded-full flex items-center justify-center text-white ring-2 ring-white shadow-sm">
+                      <Instagram className="w-4 h-4" />
                     </div>
                   </div>
-                  <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">Ad Performance: High</span>
+                  <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-100/50 px-2 py-0.5 rounded-md">Ad Performance: High</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="h-10 w-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <div className="h-10 w-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-100">
                     <MessageSquare className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
