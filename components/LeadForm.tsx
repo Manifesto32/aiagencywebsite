@@ -104,22 +104,22 @@ const LeadForm: React.FC = () => {
         <div className="relative bg-white rounded-[4rem] border-8 border-white shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] overflow-hidden ring-1 ring-slate-200">
           
           {/* Expanded Header Section */}
-          <div className="bg-slate-900 py-20 sm:py-24 px-6 text-center relative overflow-hidden">
+          <div className="bg-slate-900 py-16 sm:py-20 px-6 text-center relative overflow-hidden">
             {/* Background Decorative Accents */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full filter blur-[150px] opacity-20 -mr-48 -mt-48"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500 rounded-full filter blur-[100px] opacity-10 -ml-32 -mb-32"></div>
             
             <div className="relative z-10 max-w-6xl mx-auto">
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-6">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs font-black uppercase tracking-[0.3em]">
                   <Globe className="w-4 h-4 mr-2" />
                   Territory Registration Active
                 </div>
               </div>
-              <h2 className="text-5xl sm:text-7xl lg:text-[100px] font-black text-white mb-10 tracking-tighter leading-[0.85] uppercase">
+              <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1] uppercase">
                 Start Here: Secure Your Territory & Book a Free Consultation
               </h2>
-              <p className="text-xl sm:text-2xl text-slate-300 max-w-3xl mx-auto font-medium leading-relaxed mb-8">
+              <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-medium leading-relaxed mb-8">
                 Complete the form below to secure your territory and begin onboarding—once submitted, you’ll be taken to schedule a free consultation call.
               </p>
               <div className="flex items-center justify-center text-blue-400 font-bold text-sm tracking-widest uppercase bg-white/5 py-4 px-8 rounded-2xl border border-white/10 inline-flex">
