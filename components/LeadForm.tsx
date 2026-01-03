@@ -71,7 +71,7 @@ const LeadForm: React.FC = () => {
   if (isSubmitted) {
     return (
       <section id="initialize-ai" className="py-24 bg-white relative min-h-[600px] flex items-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-blue-50 rounded-[3rem] p-8 sm:p-16 border border-blue-100 shadow-xl inline-block text-left">
             <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-8 shadow-lg shadow-green-200">
               <CheckCircle2 className="w-8 h-8 text-white" />
@@ -79,7 +79,7 @@ const LeadForm: React.FC = () => {
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-6">Thank you for your interest in Bloom Link AI Agency!</h2>
             <div className="space-y-4 text-slate-700 leading-relaxed font-medium">
               <p>
-                We've received your request and appreciate you taking the time to share your information with us. Someone from our team will reach out to you within the next 24 business hours to discuss how we can help scale your real estate business.
+                We've received your request and appreciate you taking the time to share your information with us.
               </p>
               <p>
                 In the meantime, feel free to explore our website to learn more about how our Appointment Generation System is helping real estate professionals book more qualified listing appointments.
@@ -108,11 +108,11 @@ const LeadForm: React.FC = () => {
     <section id="initialize-ai" className="py-24 bg-white relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
-            Initialize Your Appointment Generation System
+          <h2 className="text-5xl sm:text-7xl lg:text-8xl font-black text-slate-900 mb-8 tracking-tighter leading-[0.95]">
+            Start Here: Secure Your Territory & Book a Free Consultation
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-4">
-            Complete the form below to secure your territory and start your onboarding process.
+            Complete the form below to secure your territory and begin onboarding—once submitted, you’ll be taken to schedule a free consultation call.
           </p>
           <div className="flex items-center justify-center text-blue-600 font-semibold text-sm">
             <ShieldCheck className="w-4 h-4 mr-2" />

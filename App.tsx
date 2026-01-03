@@ -7,7 +7,9 @@ import Benefits from './components/Benefits';
 import HearYourFutureAI from './components/HearYourFutureAI';
 import HowItWorks from './components/HowItWorks';
 import StrategicAdvertising from './components/StrategicAdvertising';
+import MarketInsights from './components/MarketInsights';
 import GettingStarted from './components/GettingStarted';
+import Pricing from './components/Pricing';
 import OfferSection from './components/OfferSection';
 import CTABlock from './components/CTABlock';
 import LeadForm from './components/LeadForm';
@@ -43,10 +45,11 @@ const App: React.FC = () => {
         <HowItWorks />
         <StrategicAdvertising />
         <Benefits />
-        <HearYourFutureAI />
+        {/* <HearYourFutureAI /> */}
+        <MarketInsights />
         <GettingStarted />
+        <Pricing />
         <OfferSection />
-        <CTABlock />
         <LeadForm />
         <FAQ />
       </main>

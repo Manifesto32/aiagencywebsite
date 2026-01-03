@@ -40,6 +40,10 @@ const OfferSection: React.FC = () => {
                 Risk-Free Performance Partnership
               </div>
             </div>
+
+            <div className="mt-10 text-[11px] sm:text-xs text-slate-400 font-medium italic">
+              *Performance guarantee applies exclusively to the "Paid Ads + AI Appointment Setter" package.
+            </div>
           </div>
         </div>
       </div>
