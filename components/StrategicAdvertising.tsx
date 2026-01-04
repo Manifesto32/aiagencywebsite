@@ -61,53 +61,6 @@ const StrategicAdvertising: React.FC = () => {
           </div>
         </div>
 
-        {/* The Power of Lead Form Optimization */}
-        <div className="bg-white rounded-[3rem] p-8 sm:p-12 mb-24 border border-blue-50 shadow-lg">
-          <h3 className="text-2xl font-black text-slate-900 mb-8">The Power of Lead Form Optimization</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <div className="w-6 h-6 bg-green-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <CheckCircle2 className="w-4 h-4 text-green-600" />
-                </div>
-                <div>
-                  <p className="font-bold text-slate-900">Reduce Friction</p>
-                  <p className="text-sm text-slate-600">Streamlined forms that capture essential information without overwhelming prospects.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <div className="w-6 h-6 bg-green-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <CheckCircle2 className="w-4 h-4 text-green-600" />
-                </div>
-                <div>
-                  <p className="font-bold text-slate-900">Offer Clear Value</p>
-                  <p className="text-sm text-slate-600">Prospects understand exactly what they'll receive in exchange for their information.</p>
-                </div>
-              </li>
-            </ul>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <div className="w-6 h-6 bg-green-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <CheckCircle2 className="w-4 h-4 text-green-600" />
-                </div>
-                <div>
-                  <p className="font-bold text-slate-900">Build Trust</p>
-                  <p className="text-sm text-slate-600">Professional design and clear privacy assurances increase submission rates.</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <div className="w-6 h-6 bg-green-50 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <CheckCircle2 className="w-4 h-4 text-green-600" />
-                </div>
-                <div>
-                  <p className="font-bold text-slate-900">Get Leads That Actually Convert</p>
-                  <p className="text-sm text-slate-600">Stop wasting time on tire-kickers and curiosity seekers. Our optimized lead forms act as your first line of qualification, filtering prospects before they ever reach you.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
         {/* The Bloom Link Advantage - Main Feature Section */}
         <div className="mb-8">
           <div className="text-center mb-16">

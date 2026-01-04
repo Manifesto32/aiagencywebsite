@@ -1,5 +1,5 @@
 import { GoogleGenAI } from "@google/genai";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Solutions from './components/Solutions';
@@ -15,6 +15,7 @@ import CTABlock from './components/CTABlock';
 import LeadForm from './components/LeadForm';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 /**
  * GHL_CONFIG: The central hub for your GoHighLevel connection.
@@ -36,9 +37,48 @@ export const GHL_CONFIG = {
 };
 
 const App: React.FC = () => {
+  const [currentView, setCurrentView] = useState<'home' | 'privacy'>('home');
+
+  // Simple "router" effect to handle browser back button or direct hash navigation
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#privacy') {
+        setCurrentView('privacy');
+        window.scrollTo(0, 0);
+      } else {
+        setCurrentView('home');
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    handleHashChange(); // Check on initial load
+
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const navigateToPrivacy = () => {
+    window.location.hash = 'privacy';
+  };
+
+  const navigateToHome = () => {
+    window.location.hash = '';
+  };
+
+  if (currentView === 'privacy') {
+    return (
+      <div className="min-h-screen flex flex-col selection:bg-blue-100 selection:text-blue-900 bg-white">
+        <Navbar onLogoClick={navigateToHome} />
+        <main className="flex-1">
+          <PrivacyPolicy />
+        </main>
+        <Footer onPrivacyClick={navigateToPrivacy} />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen flex flex-col selection:bg-blue-100 selection:text-blue-900">
-      <Navbar />
+      <Navbar onLogoClick={navigateToHome} />
       <main>
         <Hero />
         <Solutions />
@@ -48,12 +88,12 @@ const App: React.FC = () => {
         {/* <HearYourFutureAI /> */}
         <MarketInsights />
         <GettingStarted />
-        <Pricing />
+        {/* <Pricing /> */}
         <OfferSection />
         <LeadForm />
         <FAQ />
       </main>
-      <Footer />
+      <Footer onPrivacyClick={navigateToPrivacy} />
     </div>
   );
 };

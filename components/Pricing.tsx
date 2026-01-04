@@ -7,9 +7,9 @@ const packages = [
     title: "Paid Ads + AI Appointment Setter",
     subtitle: "Upfront Package",
     price: "$5,000",
-    period: "one-time",
+    period: "full 90-day term",
     features: [
-      "10 Listing Appointments Target",
+      "Targeting 10 booked appointments in 90 days as a conservative minimum.",
       "Up to ~$30/day Recommended Ad Spend",
       "Full Meta & Instagram Ad Setup",
       "AI Appointment Setter System",
@@ -22,7 +22,7 @@ const packages = [
     price: "$2,000",
     period: "/month x 3 months",
     features: [
-      "10 Listing Appointments Target",
+      "Targeting 10 booked appointments in 90 days as a conservative minimum.",
       "Up to ~$30/day Recommended Ad Spend",
       "Full Meta & Instagram Ad Setup",
       "AI Appointment Setter System",
@@ -33,7 +33,7 @@ const packages = [
     title: "AI Appointment Setter",
     subtitle: "Upfront Package",
     price: "$2,500",
-    period: "one-time",
+    period: "full 90-day term",
     features: [
       "AI Appointment Setter System",
       "Comprehensive CRM Onboarding",
@@ -62,11 +62,14 @@ const Pricing: React.FC = () => {
     <section id="pricing" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
             Transparent, Performance-Driven Pricing
           </h2>
+          <div className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-sm font-black uppercase tracking-widest mb-6 border border-blue-100">
+            90-Day Performance Terms Apply to All Plans
+          </div>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Select the growth engine that fits your current business stage. All plans include our proprietary AI technology and expert support.
+            Select the growth engine that fits your current business stage. All plans include our proprietary AI technology and expert support for the next 3 months.
           </p>
         </div>
 
@@ -108,7 +111,7 @@ const Pricing: React.FC = () => {
         <div className="max-w-3xl mx-auto bg-slate-50 rounded-3xl p-8 border border-slate-100 text-center">
           <p className="text-sm text-slate-500 font-medium leading-relaxed italic">
             <span className="text-slate-900 font-bold uppercase tracking-widest mr-2">Note:</span>
-            Ad spend can scale up depending on your performance goals, and we can discuss the right budget and overall pricing based on your market, lead volume, and desired appointment targets.
+            Ad spend can scale up depending on your performance goals, and we can discuss the right budget and overall pricing based on your market, lead volume, and desired appointment targets. All packages listed above represent a standard 3-month (90-day) service commitment.
           </p>
         </div>
       </div>
