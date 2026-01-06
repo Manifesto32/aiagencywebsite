@@ -201,13 +201,13 @@ const StrategicAdvertising: React.FC = () => {
               <p className="text-slate-600 text-sm">Optimized landing pages with intelligent lead forms designed to filter and pre-qualify prospects, ensuring you receive genuinely interested buyers and sellers ready for conversation.</p>
             </div>
 
-            {/* Box 3: Systematic AI Follow-Up */}
+            {/* Box 3: Inbound AI Appointment Setter */}
             <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mr-4">
                   <Bot className="w-6 h-6 text-[#2563EB]" />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900">Systematic AI Follow-Up</h4>
+                <h4 className="text-xl font-bold text-slate-900">Inbound AI Appointment Setter</h4>
               </div>
               <div className="flex justify-center mb-6">
                 <div className="w-24 h-40 bg-slate-900 rounded-2xl p-2 relative">

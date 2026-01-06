@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
               Our AI Books Appointments Instantly.
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-              We run Meta & Instagram ads for real estate agents, then our AI instantly calls, qualifies, and books listing appointments—24/7, even while you sleep.
+              We run Meta & Instagram paid ads for real estate agents, then our AI instantly calls, qualifies, and books listing appointments—24/7, even while you sleep.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
               <a 

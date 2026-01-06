@@ -9,6 +9,7 @@ import HowItWorks from './components/HowItWorks';
 import StrategicAdvertising from './components/StrategicAdvertising';
 import MarketInsights from './components/MarketInsights';
 import GettingStarted from './components/GettingStarted';
+import PackagesPricing from './components/PackagesPricing';
 import Pricing from './components/Pricing';
 import OfferSection from './components/OfferSection';
 import CTABlock from './components/CTABlock';
@@ -88,6 +89,7 @@ const App: React.FC = () => {
         {/* <HearYourFutureAI /> */}
         <MarketInsights />
         <GettingStarted />
+        <PackagesPricing />
         {/* <Pricing /> */}
         <OfferSection />
         <LeadForm />
