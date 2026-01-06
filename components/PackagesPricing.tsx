@@ -101,7 +101,7 @@ const PackagesPricing: React.FC = () => {
                 </div>
                 <h3 className="text-3xl font-black text-slate-900 mb-2">AI Appointment Setter</h3>
                 <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-4xl font-black text-slate-900">$2,000 - $3,000</span>
+                  <span className="text-4xl font-black text-slate-900">$950</span>
                   <span className="text-slate-400 font-bold uppercase tracking-widest text-xs">/ Month</span>
                 </div>
                 <p className="text-sm font-bold text-slate-400 uppercase tracking-widest bg-slate-50 px-3 py-1 rounded inline-block">
