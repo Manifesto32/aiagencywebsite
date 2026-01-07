@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, Sparkles, Target, Zap, Megaphone, Bot } from 'lucide-react';
+import { Check, Sparkles, Target, Zap, Megaphone, Bot, Clock } from 'lucide-react';
 import { GHL_CONFIG } from '../App';
 
 const PackagesPricing: React.FC = () => {
@@ -34,7 +34,7 @@ const PackagesPricing: React.FC = () => {
                 </div>
                 <h3 className="text-3xl font-black text-slate-900 mb-2">Paid Ads + AI Appointment Setter</h3>
                 <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-4xl font-black text-slate-900">$2,000 - $3,000</span>
+                  <span className="text-4xl font-black text-slate-900">$2,000</span>
                   <span className="text-slate-400 font-bold uppercase tracking-widest text-xs">/ Month</span>
                 </div>
                 <p className="text-sm font-bold text-blue-500 uppercase tracking-widest bg-blue-50 px-3 py-1 rounded inline-block">
@@ -94,24 +94,37 @@ const PackagesPricing: React.FC = () => {
 
           {/* Package 2: AI Appointment Setter Standalone */}
           <div className="relative group">
-            <div className="relative bg-white border-4 border-slate-100 rounded-[3.5rem] p-8 sm:p-12 shadow-sm flex flex-col h-full overflow-hidden">
+            <div className="relative bg-white border-4 border-slate-100 rounded-[3.5rem] p-8 sm:p-12 shadow-sm flex flex-col h-full overflow-hidden text-left">
               <div className="mb-8">
                 <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-50 text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                   Automation Only
                 </div>
                 <h3 className="text-3xl font-black text-slate-900 mb-2">AI Appointment Setter</h3>
-                <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-4xl font-black text-slate-900">$950</span>
-                  <span className="text-slate-400 font-bold uppercase tracking-widest text-xs">/ Month</span>
+                <div className="flex flex-col mb-4">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-black text-slate-900">$400</span>
+                    <span className="text-slate-400 font-bold uppercase tracking-widest text-xs">/ Month</span>
+                  </div>
+                  <div className="text-sm font-bold text-slate-500 mt-1 uppercase tracking-wider">
+                    + $300 One-time Setup Fee
+                  </div>
                 </div>
-                {/* Duration badge removed per request */}
               </div>
 
               <div className="space-y-8 flex-1">
                 <div className="bg-blue-50/50 p-6 rounded-3xl border border-blue-100">
-                  <p className="text-sm text-blue-700 font-bold italic leading-relaxed">
+                  <p className="text-sm text-blue-700 font-bold italic leading-relaxed mb-4">
                     "Perfect if you already have a consistent flow of leads but need a system to ensure none go cold."
                   </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center text-[10px] font-black text-blue-600 uppercase tracking-[0.15em] bg-white/60 px-3 py-1.5 rounded-lg inline-flex">
+                      <Clock className="w-3.5 h-3.5 mr-2" />
+                      Up to 300 minutes per month included
+                    </div>
+                    <p className="text-[11px] font-bold text-slate-500 leading-tight bg-white/40 p-3 rounded-xl border border-blue-50">
+                      300 minutes is basically <span className="text-blue-600">67 inbound calls per month</span> assuming 4.5 minutes per call.
+                    </p>
+                  </div>
                 </div>
                 
                 <ul className="space-y-5">
