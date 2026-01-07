@@ -104,9 +104,7 @@ const PackagesPricing: React.FC = () => {
                   <span className="text-4xl font-black text-slate-900">$950</span>
                   <span className="text-slate-400 font-bold uppercase tracking-widest text-xs">/ Month</span>
                 </div>
-                <p className="text-sm font-bold text-slate-400 uppercase tracking-widest bg-slate-50 px-3 py-1 rounded inline-block">
-                  Next 3 Months
-                </p>
+                {/* Duration badge removed per request */}
               </div>
 
               <div className="space-y-8 flex-1">
