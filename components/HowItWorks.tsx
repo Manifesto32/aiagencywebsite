@@ -4,7 +4,7 @@ import { MousePointerClick, PhoneCall, CalendarCheck2 } from 'lucide-react';
 const steps = [
   {
     title: "Step 1: We Generate Your Leads",
-    description: "We launch high-converting Meta & Instagram campaigns targeting local real estate prospects. When they click your ad and submit their details via our optimized lead forms, they officially become your exclusive lead.",
+    description: "Bring your own leads or let us run the ads—your choice. If you want us to generate leads, we launch high-converting Meta & Instagram campaigns targeting local prospects. When someone submits their info through the lead form, they become your lead and flow into our AI booking system.",
     icon: MousePointerClick,
     color: "bg-blue-500",
     glow: "shadow-blue-200"

@@ -33,6 +33,9 @@ export const GHL_CONFIG = {
 
   // 4. URL to anchor section
   formUrl: "#initialize-ai",
+
+  // 5. Success Redirection URL
+  bookingUrl: "https://aiagencywebs.bloomlinkaiagency.com/booking-page",
   
   buttonText: "Start booking more listings",
 };

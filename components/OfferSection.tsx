@@ -42,7 +42,7 @@ const OfferSection: React.FC = () => {
             </div>
 
             <div className="mt-10 text-[11px] sm:text-xs text-slate-400 font-medium italic">
-              *Performance guarantee applies exclusively to the "Paid Ads + AI Appointment Setter" package.
+              *Performance guarantee applies exclusively to the "Managed Paid Ads + AI Appointment Setter" package.
             </div>
           </div>
         </div>

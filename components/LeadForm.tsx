@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { ShieldCheck, Send, CheckCircle2, Globe } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ShieldCheck, Send, CheckCircle2, Globe, ArrowRight, Loader2 } from 'lucide-react';
+import { GHL_CONFIG } from '../App';
 
 const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/Y5zsNn2xY4yBhOcBzCel/webhook-trigger/490b0dd3-56fe-46b7-a0b0-08cd29f1dc1e";
 
@@ -21,6 +22,16 @@ const LeadForm: React.FC = () => {
     timeline: '',
     challenge: ''
   });
+
+  // Handle redirection logic
+  useEffect(() => {
+    if (isSubmitted) {
+      const timer = setTimeout(() => {
+        window.location.href = GHL_CONFIG.bookingUrl;
+      }, 4000); // 4 second delay to let them read the message
+      return () => clearTimeout(timer);
+    }
+  }, [isSubmitted]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -71,27 +82,53 @@ const LeadForm: React.FC = () => {
     return (
       <section id="initialize-ai" className="py-24 bg-slate-50 relative min-h-[600px] flex items-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-[3rem] p-8 sm:p-16 border-4 border-blue-600 shadow-2xl inline-block text-left">
+          <div className="bg-white rounded-[3rem] p-8 sm:p-16 border-4 border-blue-600 shadow-2xl inline-block text-left relative overflow-hidden">
+            {/* Redirection progress bar */}
+            <div className="absolute top-0 left-0 h-1.5 bg-blue-600 animate-progress-shrink w-full origin-left"></div>
+            
             <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-8 shadow-lg shadow-green-200">
               <CheckCircle2 className="w-8 h-8 text-white" />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-6">Application Received Successfully!</h2>
-            <div className="space-y-4 text-slate-700 leading-relaxed font-medium">
-              <p>We've received your request and territory reservation details. One of our specialists will review your application shortly.</p>
-              <p>In the meantime, feel free to explore our website to learn more about how our Appointment Generation System is helping real estate professionals book more qualified listing appointments.</p>
-              <div className="pt-4">
-                <p className="text-slate-900 font-bold">Warm regards,</p>
-                <p className="text-[#2563EB] font-bold text-lg">The Bloom Link AI Team</p>
+            
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-6 uppercase tracking-tight">Application Received!</h2>
+            
+            <div className="space-y-4 text-slate-700 leading-relaxed font-medium mb-10">
+              <p>We've successfully received your request and territory reservation details.</p>
+              <p className="text-blue-600 font-bold">Redirecting you to our Booking Page to schedule your free consultation call...</p>
+              
+              <div className="pt-4 flex items-center gap-2 text-slate-400 text-sm">
+                <Loader2 className="w-4 h-4 animate-spin" />
+                <span>Redirecting in 4 seconds...</span>
               </div>
             </div>
-            <button 
-              onClick={() => setIsSubmitted(false)}
-              className="mt-8 text-sm text-slate-400 font-semibold hover:text-[#2563EB] transition-colors"
-            >
-              ← Back to application
-            </button>
+
+            <div className="flex flex-col sm:flex-row gap-4 items-center">
+              <a 
+                href={GHL_CONFIG.bookingUrl}
+                className="btn-blue px-8 py-4 rounded-2xl text-white font-black uppercase tracking-widest text-sm inline-flex items-center shadow-lg shadow-blue-200"
+              >
+                Continue to Booking
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
+              
+              <button 
+                onClick={() => setIsSubmitted(false)}
+                className="text-sm text-slate-400 font-semibold hover:text-[#2563EB] transition-colors uppercase tracking-widest"
+              >
+                ← Edit Application
+              </button>
+            </div>
           </div>
         </div>
+        <style>{`
+          @keyframes progress-shrink {
+            from { transform: scaleX(1); }
+            to { transform: scaleX(0); }
+          }
+          .animate-progress-shrink {
+            animation: progress-shrink 4s linear forwards;
+          }
+        `}</style>
       </section>
     );
   }
@@ -274,9 +311,9 @@ const LeadForm: React.FC = () => {
                         className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold"
                       >
                         <option value="" disabled>Please select...</option>
-                        <option>Paid Ad Management</option>
+                        <option>Managed Paid Ads</option>
                         <option>AI Appointment Setter</option>
-                        <option>Paid Ad Management & AI Appointment Setter</option>
+                        <option>Managed Paid Ads & AI Appointment Setter</option>
                         <option>Other AI automation</option>
                       </select>
                     </div>

@@ -9,11 +9,11 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6">
-              We Generate Your Real Estate Leads.<br />
-              Our AI Books Appointments Instantly.
+              Stop Chasing Leads.<br />
+              Let AI Book the Appointment.
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-              We run Meta & Instagram paid ads for real estate agents, then our AI instantly calls, qualifies, and books listing appointments—24/7, even while you sleep.
+              New leads don’t wait. Our AI calls within seconds, qualifies, and books directly to your calendar. Use your current leads—or we can run the ads too.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
               <a 

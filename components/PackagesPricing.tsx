@@ -20,7 +20,7 @@ const PackagesPricing: React.FC = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           
-          {/* Package 1: Paid Ads + AI Appointment Setter */}
+          {/* Package 1: Managed Paid Ads + AI Appointment Setter */}
           <div className="relative group">
             <div className="absolute inset-0 bg-blue-600 rounded-[3rem] blur-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
             <div className="relative bg-white border border-slate-100 rounded-[3.5rem] p-8 sm:p-12 shadow-2xl shadow-blue-50 flex flex-col h-full overflow-hidden">
@@ -32,7 +32,7 @@ const PackagesPricing: React.FC = () => {
                 <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                   Complete Growth Engine
                 </div>
-                <h3 className="text-3xl font-black text-slate-900 mb-2">Paid Ads + AI Appointment Setter</h3>
+                <h3 className="text-3xl font-black text-slate-900 mb-2">Managed Paid Ads + AI Appointment Setter</h3>
                 <div className="flex items-baseline gap-2 mb-4">
                   <span className="text-4xl font-black text-slate-900">$2,000</span>
                   <span className="text-slate-400 font-bold uppercase tracking-widest text-xs">/ Month</span>
@@ -53,10 +53,10 @@ const PackagesPricing: React.FC = () => {
               </div>
 
               <div className="space-y-8 flex-1">
-                {/* Section A: Paid Ads */}
+                {/* Section A: Managed Paid Ads */}
                 <div>
                   <h4 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4 flex items-center">
-                    <Megaphone className="w-4 h-4 mr-2 text-blue-600" /> Paid Ads
+                    <Megaphone className="w-4 h-4 mr-2 text-blue-600" /> Managed Paid Ads
                   </h4>
                   <ul className="space-y-3">
                     {["Meta (Facebook/Instagram) campaign setup + launch", "Ad creative + copy creation (multiple variations)", "Audience targeting (geo + interest)", "Weekly optimization", "Ad spend included up to your stated daily cap"].map((item, i) => (

@@ -25,7 +25,7 @@ const StrategicAdvertising: React.FC = () => {
         {/* Main Heading */}
         <div className="text-center mb-20">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-6 inline-block relative">
-            Transform Your Lead Generation with Strategic Paid Advertising
+            Transform Your Lead Generation with Strategic Managed Paid Advertising
             <div className="h-1.5 w-1/2 bg-[#2563EB] mx-auto mt-4 rounded-full"></div>
           </h2>
         </div>
@@ -42,7 +42,7 @@ const StrategicAdvertising: React.FC = () => {
             </div>
             <h3 className="text-2xl font-bold text-slate-900 mb-4">The Market Reality</h3>
             <p className="text-slate-600 leading-relaxed relative z-10">
-              Consider this: <span className="font-bold text-slate-900 text-lg">75% of real estate agents</span> use social media, yet only a fraction generate consistent leads from their efforts. The difference? Strategic paid advertising with optimized lead form objectives that convert scrollers into scheduled appointments.
+              Consider this: <span className="font-bold text-slate-900 text-lg">75% of real estate agents</span> use social media, yet only a fraction generate consistent leads from their efforts. The difference? Strategic managed paid advertising with optimized lead form objectives that convert scrollers into scheduled appointments.
             </p>
           </div>
 
@@ -56,7 +56,7 @@ const StrategicAdvertising: React.FC = () => {
             </div>
             <h3 className="text-2xl font-bold text-slate-900 mb-4">From Passive to Proactive</h3>
             <p className="text-slate-600 leading-relaxed relative z-10">
-              Traditional lead generation relies on chance—waiting for referrals, hoping for walk-ins, competing for expired listings. Paid advertising flips this model entirely. Instead of waiting for business to find you, you're <span className="font-bold text-slate-900">actively creating opportunities</span> through targeted campaigns that speak directly to buyer and seller needs.
+              Traditional lead generation relies on chance—waiting for referrals, hoping for walk-ins, competing for expired listings. Managed paid advertising flips this model entirely. Instead of waiting for business to find you, you're <span className="font-bold text-slate-900">actively creating opportunities</span> through targeted campaigns that speak directly to buyer and seller needs.
             </p>
           </div>
         </div>
