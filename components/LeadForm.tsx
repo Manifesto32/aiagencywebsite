@@ -138,138 +138,138 @@ const LeadForm: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Application Container with Borders */}
-        <div className="relative bg-white rounded-[4rem] border-8 border-white shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] overflow-hidden ring-1 ring-slate-200">
+        <div className="relative bg-white rounded-[4rem] border-8 border-white shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] overflow-hidden ring-1 ring-slate-200">
           
-          {/* Expanded Header Section */}
-          <div className="bg-slate-900 py-16 sm:py-20 px-6 text-center relative overflow-hidden">
+          {/* Refined Header Section */}
+          <div className="bg-slate-900 py-12 sm:py-16 px-6 text-center relative overflow-hidden">
             {/* Background Decorative Accents */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full filter blur-[150px] opacity-20 -mr-48 -mt-48"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500 rounded-full filter blur-[100px] opacity-10 -ml-32 -mb-32"></div>
             
-            <div className="relative z-10 max-w-6xl mx-auto">
+            <div className="relative z-10 max-w-4xl mx-auto">
               <div className="flex justify-center mb-6">
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs font-black uppercase tracking-[0.3em]">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600/10 border border-blue-500/30 text-blue-400 text-[10px] font-black uppercase tracking-[0.3em]">
                   <Globe className="w-4 h-4 mr-2" />
                   Territory Registration Active
                 </div>
               </div>
-              <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tight leading-[1.1] uppercase">
-                Start Here: Secure Your Territory & Book a Free Consultation
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-blue-400 mb-6 tracking-tight leading-[1.2] uppercase">
+                Secure Your Territory & <br className="hidden sm:block" /> Book a Free Consultation
               </h2>
-              <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-medium leading-relaxed mb-8">
-                Complete the form below to secure your territory and begin onboarding—once submitted, you’ll be taken to schedule a free consultation call.
+              <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-medium leading-relaxed mb-8 opacity-90">
+                Complete the form below to secure your exclusive market territory. Once submitted, you'll be redirected to our calendar to pick a time for your growth call.
               </p>
-              <div className="flex items-center justify-center text-blue-400 font-bold text-sm tracking-widest uppercase bg-white/5 py-4 px-8 rounded-2xl border border-white/10 inline-flex">
-                <ShieldCheck className="w-5 h-5 mr-3" />
-                End-to-End Encrypted & Secure Portal
+              <div className="flex items-center justify-center text-white/60 font-bold text-[10px] tracking-widest uppercase bg-white/5 py-3 px-6 rounded-2xl border border-white/10 inline-flex">
+                <ShieldCheck className="w-4 h-4 mr-3 text-blue-400" />
+                Secure End-to-End Encrypted Portal
               </div>
             </div>
           </div>
 
           {/* Form Content Section */}
-          <div className="py-20 px-4 sm:px-12 lg:px-24 bg-white">
-            <div className="max-w-4xl mx-auto">
+          <div className="py-16 px-4 sm:px-12 lg:px-24 bg-white">
+            <div className="max-w-3xl mx-auto">
               <form onSubmit={handleSubmit} className="space-y-12">
                 {/* Contact Information Section */}
-                <div className="bg-slate-50/50 p-8 sm:p-10 rounded-[2.5rem] border border-slate-100">
+                <div className="bg-slate-50/50 p-6 sm:p-10 rounded-[2.5rem] border border-slate-100">
                   <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.3em] mb-8 flex items-center">
                     <span className="w-8 h-px bg-blue-600 mr-4"></span>
                     Step 1: Identity & Contact
                   </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">First Name *</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">First Name *</label>
                       <input 
                         required 
                         name="firstName"
                         type="text" 
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold" 
+                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                         placeholder="John" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Last Name *</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Last Name *</label>
                       <input 
                         required 
                         name="lastName"
                         type="text" 
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold" 
+                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                         placeholder="Doe" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Email Address *</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Email Address *</label>
                       <input 
                         required 
                         name="email"
                         type="email" 
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold" 
+                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                         placeholder="john@example.com" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Phone Number *</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Phone Number *</label>
                       <input 
                         required 
                         name="phone"
                         type="tel" 
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold" 
+                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                         placeholder="(555) 000-0000" 
                       />
                     </div>
                     <div className="sm:col-span-2 space-y-2">
-                      <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Organization (Optional)</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Organization (Optional)</label>
                       <input 
                         name="organization"
                         type="text" 
                         value={formData.organization}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold" 
+                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                         placeholder="Agency or Brokerage Name" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">City *</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">City *</label>
                       <input 
                         required 
                         name="city"
                         type="text" 
                         value={formData.city}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold" 
+                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                         placeholder="Los Angeles" 
                       />
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">State *</label>
+                        <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">State *</label>
                         <input 
                           required 
                           name="state"
                           type="text" 
                           value={formData.state}
                           onChange={handleChange}
-                          className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold" 
+                          className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                           placeholder="CA" 
                         />
                       </div>
                       <div className="space-y-2">
-                        <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Postal Code *</label>
+                        <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Postal Code *</label>
                         <input 
                           required 
                           name="postalCode"
                           type="text" 
                           value={formData.postalCode}
                           onChange={handleChange}
-                          className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold" 
+                          className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                           placeholder="90210" 
                         />
                       </div>
@@ -278,20 +278,20 @@ const LeadForm: React.FC = () => {
                 </div>
 
                 {/* Qualifying Questions Section */}
-                <div className="bg-slate-50/50 p-8 sm:p-10 rounded-[2.5rem] border border-slate-100">
+                <div className="bg-slate-50/50 p-6 sm:p-10 rounded-[2.5rem] border border-slate-100">
                   <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.3em] mb-8 flex items-center">
                     <span className="w-8 h-px bg-blue-600 mr-4"></span>
                     Step 2: Business Goals
                   </h3>
-                  <div className="space-y-8">
+                  <div className="space-y-6">
                     <div className="space-y-2">
-                      <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">How did you hear about us? *</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">How did you hear about us? *</label>
                       <select 
                         required
                         name="source"
                         value={formData.source}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold"
+                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-sm"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Instagram Ads</option>
@@ -302,13 +302,13 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">What interests you most? *</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">What interests you most? *</label>
                       <select 
                         required
                         name="interest"
                         value={formData.interest}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold"
+                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-sm"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Managed Paid Ads</option>
@@ -318,13 +318,13 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Current monthly advertising spend? *</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Current monthly advertising spend? *</label>
                       <select 
                         required
                         name="adSpend"
                         value={formData.adSpend}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold"
+                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-sm"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Not currently running ads</option>
@@ -335,13 +335,13 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Implementation Timeline *</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Implementation Timeline *</label>
                       <select 
                         required
                         name="timeline"
                         value={formData.timeline}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold"
+                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-sm"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Immediately</option>
@@ -351,36 +351,36 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-xs font-black text-slate-400 uppercase tracking-widest ml-1">Biggest Challenge in Scaling? (Optional)</label>
+                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Biggest Challenge in Scaling? (Optional)</label>
                       <textarea 
                         name="challenge"
-                        rows={4} 
+                        rows={3} 
                         value={formData.challenge}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-2xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold resize-none" 
-                        placeholder="e.g. Inconsistent lead flow, spending too much time on follow-up..." 
+                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm resize-none" 
+                        placeholder="e.g. Inconsistent lead flow..." 
                       />
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-8">
+                <div className="pt-4">
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-blue-600 py-6 rounded-[2rem] text-white text-2xl font-black uppercase tracking-widest shadow-2xl shadow-blue-200 flex items-center justify-center transition-all hover:bg-blue-700 hover:-translate-y-1 active:scale-[0.98] disabled:opacity-70 disabled:hover:translate-y-0"
+                    className="w-full bg-blue-600 py-5 rounded-2xl text-white text-xl font-black uppercase tracking-widest shadow-xl shadow-blue-200 flex items-center justify-center transition-all hover:bg-blue-700 hover:-translate-y-1 active:scale-[0.98] disabled:opacity-70 disabled:hover:translate-y-0"
                   >
                     {isSubmitting ? (
-                      <div className="h-8 w-8 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="h-6 w-6 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
                     ) : (
                       <>
                         Secure My Territory
-                        <Send className="w-6 h-6 ml-4" />
+                        <Send className="w-5 h-5 ml-4" />
                       </>
                     )}
                   </button>
-                  <p className="text-center text-[10px] text-slate-400 mt-6 font-bold uppercase tracking-[0.2em]">
-                    By submitting, you agree to be contacted via email or phone regarding your application.
+                  <p className="text-center text-[9px] text-slate-400 mt-5 font-bold uppercase tracking-[0.2em]">
+                    Your information is protected. We will only contact you regarding this application.
                   </p>
                 </div>
               </form>
