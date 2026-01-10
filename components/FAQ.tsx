@@ -23,8 +23,8 @@ const faqs = [
     a: "Our campaigns target specific seller-intent signals and behaviors. Every lead is qualified by our AI using strategic questions about timeline, motivation, and property details. You only receive appointments with pre-vetted, high-intent prospects."
   },
   {
-    q: "Can I use just the AI Voice Agent without paid ads?",
-    a: "While we offer standalone AI Voice Agent services, we strongly recommend the complete Appointment Generation System. Without our optimized Paid Ad Campaigns generating consistent lead flow, we cannot guarantee appointment volume increases. The AI performs best with steady, qualified lead generation."
+    q: "Can I use just the AI Appointment Setter without paid ads?",
+    a: "While we offer standalone AI Appointment Setter (AI Voice Agent) services, we strongly recommend the complete Appointment Generation System. Without our optimized Paid Ad Campaigns generating consistent lead flow, we cannot guarantee appointment volume increases. The AI performs best with steady, qualified lead generation."
   },
   {
     q: "Does it integrate with my CRM?",

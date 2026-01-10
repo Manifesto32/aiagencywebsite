@@ -24,7 +24,7 @@ const Footer: React.FC<FooterProps> = ({ onPrivacyClick }) => {
               </span>
             </div>
             <p className="text-blue-50 max-w-sm mb-6 font-medium leading-relaxed">
-              We create high-converting Paid Ad Campaigns and Appointment Generation Systems that turn those leads into booked appointments—starting with high-intent real estate sellers and buyers.
+              We create high-converting Paid Ad Campaigns and AI Appointment Setters that turn those leads into booked appointments—starting with high-intent real estate sellers and buyers.
             </p>
           </div>
           

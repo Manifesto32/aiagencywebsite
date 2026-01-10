@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, Sparkles, Target, Zap, Megaphone, Bot, Clock } from 'lucide-react';
+import { Check, Sparkles, Target, Zap, Megaphone, Bot, Clock, Database } from 'lucide-react';
 import { GHL_CONFIG } from '../App';
 
 const PackagesPricing: React.FC = () => {
@@ -20,7 +20,69 @@ const PackagesPricing: React.FC = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           
-          {/* Package 1: Managed Paid Ads + AI Appointment Setter */}
+          {/* Package 1: AI Appointment Setter Standalone (Moved First) */}
+          <div className="relative group">
+            <div className="relative bg-white border-4 border-slate-100 rounded-[3.5rem] p-8 sm:p-12 shadow-sm flex flex-col h-full overflow-hidden text-left">
+              <div className="mb-8">
+                <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-50 text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                  Automation Only
+                </div>
+                <h3 className="text-3xl font-black text-slate-900 mb-2">AI Appointment Setter</h3>
+                <div className="flex flex-col mb-4">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-black text-slate-900">$400</span>
+                    <span className="text-slate-400 font-bold uppercase tracking-widest text-xs">/ Month</span>
+                  </div>
+                  <div className="text-sm font-bold text-slate-500 mt-1 uppercase tracking-wider">
+                    + $300 One-time Setup Fee
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-8 flex-1">
+                <div className="bg-blue-50/50 p-6 rounded-3xl border border-blue-100">
+                  <p className="text-sm text-blue-700 font-bold italic leading-relaxed mb-4">
+                    "Perfect if you already have a consistent flow of leads but need a system to ensure none go cold."
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center text-[10px] font-black text-blue-600 uppercase tracking-[0.15em] bg-white/60 px-3 py-1.5 rounded-lg inline-flex">
+                      <Clock className="w-3.5 h-3.5 mr-2" />
+                      Up to 300 minutes per month included
+                    </div>
+                    <p className="text-[11px] font-bold text-slate-500 leading-tight bg-white/40 p-3 rounded-xl border border-blue-50">
+                      300 minutes is basically <span className="text-blue-600">67 inbound calls per month</span> assuming 4.5 minutes per call.
+                    </p>
+                  </div>
+                </div>
+                
+                <ul className="space-y-5">
+                  {[
+                    { text: "AI inbound answering + qualification + booking", icon: Bot },
+                    { text: "Missed-call SMS", icon: Zap },
+                    { text: "Lead capture setup", icon: Target },
+                    { text: "Calendar integration", icon: Check },
+                    { text: "Weekly Reporting", icon: Check },
+                    { text: "Seamlessly integrates with your existing CRM or we'll set one up for you", icon: Database }
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center text-slate-700 font-bold text-base">
+                      <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <item.icon className="w-5 h-5 text-blue-600" />
+                      </div>
+                      {item.text}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-12">
+                <a href={GHL_CONFIG.formUrl} className="w-full border-4 border-slate-100 text-slate-900 py-5 rounded-2xl text-center font-black uppercase tracking-widest hover:bg-slate-50 transition-colors block">
+                  Get Started
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Package 2: Managed Paid Ads + AI Appointment Setter (Moved Second) */}
           <div className="relative group">
             <div className="absolute inset-0 bg-blue-600 rounded-[3rem] blur-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
             <div className="relative bg-white border border-slate-100 rounded-[3.5rem] p-8 sm:p-12 shadow-2xl shadow-blue-50 flex flex-col h-full overflow-hidden">
@@ -30,7 +92,7 @@ const PackagesPricing: React.FC = () => {
               
               <div className="mb-8">
                 <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                  Complete Growth Engine
+                  Complete Appointment Generation System
                 </div>
                 <h3 className="text-3xl font-black text-slate-900 mb-2">Managed Paid Ads + AI Appointment Setter</h3>
                 <div className="flex items-baseline gap-2 mb-4">
@@ -87,67 +149,6 @@ const PackagesPricing: React.FC = () => {
               <div className="mt-12">
                 <a href={GHL_CONFIG.formUrl} className="w-full bg-slate-900 text-white py-5 rounded-2xl text-center font-black uppercase tracking-widest hover:bg-slate-800 transition-colors block">
                   Select Package
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Package 2: AI Appointment Setter Standalone */}
-          <div className="relative group">
-            <div className="relative bg-white border-4 border-slate-100 rounded-[3.5rem] p-8 sm:p-12 shadow-sm flex flex-col h-full overflow-hidden text-left">
-              <div className="mb-8">
-                <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-50 text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                  Automation Only
-                </div>
-                <h3 className="text-3xl font-black text-slate-900 mb-2">AI Appointment Setter</h3>
-                <div className="flex flex-col mb-4">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-black text-slate-900">$400</span>
-                    <span className="text-slate-400 font-bold uppercase tracking-widest text-xs">/ Month</span>
-                  </div>
-                  <div className="text-sm font-bold text-slate-500 mt-1 uppercase tracking-wider">
-                    + $300 One-time Setup Fee
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-8 flex-1">
-                <div className="bg-blue-50/50 p-6 rounded-3xl border border-blue-100">
-                  <p className="text-sm text-blue-700 font-bold italic leading-relaxed mb-4">
-                    "Perfect if you already have a consistent flow of leads but need a system to ensure none go cold."
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center text-[10px] font-black text-blue-600 uppercase tracking-[0.15em] bg-white/60 px-3 py-1.5 rounded-lg inline-flex">
-                      <Clock className="w-3.5 h-3.5 mr-2" />
-                      Up to 300 minutes per month included
-                    </div>
-                    <p className="text-[11px] font-bold text-slate-500 leading-tight bg-white/40 p-3 rounded-xl border border-blue-50">
-                      300 minutes is basically <span className="text-blue-600">67 inbound calls per month</span> assuming 4.5 minutes per call.
-                    </p>
-                  </div>
-                </div>
-                
-                <ul className="space-y-5">
-                  {[
-                    { text: "AI inbound answering + qualification + booking", icon: Bot },
-                    { text: "Missed-call SMS", icon: Zap },
-                    { text: "Lead capture setup", icon: Target },
-                    { text: "Calendar integration", icon: Check },
-                    { text: "Weekly Reporting", icon: Check }
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center text-slate-700 font-bold text-base">
-                      <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center mr-4">
-                        <item.icon className="w-5 h-5 text-blue-600" />
-                      </div>
-                      {item.text}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-12">
-                <a href={GHL_CONFIG.formUrl} className="w-full border-4 border-slate-100 text-slate-900 py-5 rounded-2xl text-center font-black uppercase tracking-widest hover:bg-slate-50 transition-colors block">
-                  Get Started
                 </a>
               </div>
             </div>

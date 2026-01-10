@@ -13,7 +13,8 @@ import {
   Calendar,
   MoreHorizontal,
   Home,
-  Tag
+  Tag,
+  Database
 } from 'lucide-react';
 import { GHL_CONFIG } from '../App';
 
@@ -67,25 +68,27 @@ const StrategicAdvertising: React.FC = () => {
             <h3 className="text-3xl font-extrabold text-slate-900 mb-4">The Bloom Link Advantage</h3>
           </div>
 
-          {/* Static Workflow Visual */}
+          {/* Static Workflow Visual - Updated Funnel */}
           <div className="hidden lg:flex items-center justify-between mb-20 px-4">
             {[
               { label: 'Ad', icon: Share2, color: 'bg-blue-600' },
               { label: 'Landing Page', icon: Monitor, color: 'bg-indigo-600' },
               { label: 'Lead Form', icon: FileText, color: 'bg-blue-500' },
               { label: 'AI Call', icon: Bot, color: 'bg-indigo-500' },
-              { label: 'Appointment', icon: Calendar, color: 'bg-green-500' }
+              { label: 'Appointment', icon: Calendar, color: 'bg-green-500' },
+              { label: 'YOUR CRM', icon: Database, color: 'bg-slate-800' }
             ].map((step, idx, arr) => (
               <React.Fragment key={idx}>
                 <div className="flex flex-col items-center group">
-                  <div className={`w-16 h-16 ${step.color} rounded-2xl flex items-center justify-center text-white shadow-lg transform transition-transform group-hover:scale-110`}>
-                    <step.icon className="w-8 h-8" />
+                  <div className={`w-16 h-16 ${step.color} rounded-2xl flex items-center justify-center text-white shadow-lg transform transition-transform group-hover:scale-110 relative overflow-hidden`}>
+                    <step.icon className="w-8 h-8 relative z-10" />
+                    <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
-                  <span className="mt-3 text-xs font-bold text-slate-500 uppercase tracking-widest">{step.label}</span>
+                  <span className="mt-3 text-[10px] font-black text-slate-500 uppercase tracking-widest">{step.label}</span>
                 </div>
                 {idx < arr.length - 1 && (
-                  <div className="flex-1 flex items-center justify-center px-4">
-                    <ArrowRight className="w-6 h-6 text-slate-300" />
+                  <div className="flex-1 flex items-center justify-center px-2">
+                    <ArrowRight className="w-5 h-5 text-slate-300" />
                   </div>
                 )}
               </React.Fragment>
@@ -259,7 +262,7 @@ const StrategicAdvertising: React.FC = () => {
                 {[
                   { text: 'Value-driven, custom ads', icon: CheckCircle2 },
                   { text: 'Optimized high-conversion forms', icon: CheckCircle2 },
-                  { text: 'Instant AI-powered follow-up', icon: CheckCircle2 },
+                  { text: 'Instant AI-powered voice agent', icon: CheckCircle2 },
                   { text: 'Systematic, scalable process', icon: CheckCircle2 }
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center text-slate-900">

@@ -25,7 +25,7 @@ const benefitCards = [
   {
     title: "Instant Dial for Every Lead",
     icon: PhoneIncoming,
-    description: "Persistent phone/SMS sequences for leads who don't answer initially.",
+    description: "Structured conversation flows that feel natural and human - your leads won't know they're talking to AI",
     bullets: [
       "Natural conversation that qualifies motivation",
       "Qualifies timeline and property details",
