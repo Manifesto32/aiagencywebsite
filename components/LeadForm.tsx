@@ -28,7 +28,7 @@ const LeadForm: React.FC = () => {
     if (isSubmitted) {
       const timer = setTimeout(() => {
         window.location.href = GHL_CONFIG.bookingUrl;
-      }, 4000); // 4 second delay to let them read the message
+      }, 4000); 
       return () => clearTimeout(timer);
     }
   }, [isSubmitted]);
@@ -80,11 +80,10 @@ const LeadForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <section id="initialize-ai" className="py-24 bg-slate-50 relative min-h-[600px] flex items-center">
+      <section id="initialize-ai" className="py-24 bg-slate-50 relative min-h-[600px] flex items-center" aria-live="polite">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white rounded-[3rem] p-8 sm:p-16 border-4 border-blue-600 shadow-2xl inline-block text-left relative overflow-hidden">
-            {/* Redirection progress bar */}
-            <div className="absolute top-0 left-0 h-1.5 bg-blue-600 animate-progress-shrink w-full origin-left"></div>
+            <div className="absolute top-0 left-0 h-1.5 bg-blue-600 animate-progress-shrink w-full origin-left" aria-hidden="true"></div>
             
             <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-8 shadow-lg shadow-green-200">
               <CheckCircle2 className="w-8 h-8 text-white" />
@@ -137,14 +136,11 @@ const LeadForm: React.FC = () => {
     <section id="initialize-ai" className="py-24 bg-slate-50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Main Application Container with Borders */}
         <div className="relative bg-white rounded-[4rem] border-8 border-white shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] overflow-hidden ring-1 ring-slate-200">
           
-          {/* Refined Header Section */}
           <div className="bg-slate-900 py-12 sm:py-16 px-6 text-center relative overflow-hidden">
-            {/* Background Decorative Accents */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full filter blur-[150px] opacity-20 -mr-48 -mt-48"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500 rounded-full filter blur-[100px] opacity-10 -ml-32 -mb-32"></div>
+            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full filter blur-[150px] opacity-20 -mr-48 -mt-48" aria-hidden="true"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500 rounded-full filter blur-[100px] opacity-10 -ml-32 -mb-32" aria-hidden="true"></div>
             
             <div className="relative z-10 max-w-4xl mx-auto">
               <div className="flex justify-center mb-6">
@@ -166,11 +162,9 @@ const LeadForm: React.FC = () => {
             </div>
           </div>
 
-          {/* Form Content Section */}
           <div className="py-16 px-4 sm:px-12 lg:px-24 bg-white">
             <div className="max-w-3xl mx-auto">
-              <form onSubmit={handleSubmit} className="space-y-12">
-                {/* Contact Information Section */}
+              <form onSubmit={handleSubmit} className="space-y-12" id="reservation-form">
                 <div className="bg-slate-50/50 p-6 sm:p-10 rounded-[2.5rem] border border-slate-100">
                   <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.3em] mb-8 flex items-center">
                     <span className="w-8 h-px bg-blue-600 mr-4"></span>
@@ -178,97 +172,113 @@ const LeadForm: React.FC = () => {
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">First Name *</label>
+                      <label htmlFor="firstName" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">First Name *</label>
                       <input 
                         required 
+                        id="firstName"
                         name="firstName"
                         type="text" 
                         value={formData.firstName}
                         onChange={handleChange}
+                        autoComplete="given-name"
                         className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                         placeholder="John" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Last Name *</label>
+                      <label htmlFor="lastName" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Last Name *</label>
                       <input 
                         required 
+                        id="lastName"
                         name="lastName"
                         type="text" 
                         value={formData.lastName}
                         onChange={handleChange}
+                        autoComplete="family-name"
                         className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                         placeholder="Doe" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Email Address *</label>
+                      <label htmlFor="email" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Email Address *</label>
                       <input 
                         required 
+                        id="email"
                         name="email"
                         type="email" 
                         value={formData.email}
                         onChange={handleChange}
+                        autoComplete="email"
                         className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                         placeholder="john@example.com" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Phone Number *</label>
+                      <label htmlFor="phone" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Phone Number *</label>
                       <input 
                         required 
+                        id="phone"
                         name="phone"
                         type="tel" 
                         value={formData.phone}
                         onChange={handleChange}
+                        autoComplete="tel"
                         className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                         placeholder="(555) 000-0000" 
                       />
                     </div>
                     <div className="sm:col-span-2 space-y-2">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Organization (Optional)</label>
+                      <label htmlFor="organization" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Organization (Optional)</label>
                       <input 
+                        id="organization"
                         name="organization"
                         type="text" 
                         value={formData.organization}
                         onChange={handleChange}
+                        autoComplete="organization"
                         className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                         placeholder="Agency or Brokerage Name" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">City *</label>
+                      <label htmlFor="city" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">City *</label>
                       <input 
                         required 
+                        id="city"
                         name="city"
                         type="text" 
                         value={formData.city}
                         onChange={handleChange}
+                        autoComplete="address-level2"
                         className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                         placeholder="Los Angeles" 
                       />
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">State *</label>
+                        <label htmlFor="state" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">State *</label>
                         <input 
                           required 
+                          id="state"
                           name="state"
                           type="text" 
                           value={formData.state}
                           onChange={handleChange}
+                          autoComplete="address-level1"
                           className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                           placeholder="CA" 
                         />
                       </div>
                       <div className="space-y-2">
-                        <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Postal Code *</label>
+                        <label htmlFor="postalCode" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Postal Code *</label>
                         <input 
                           required 
+                          id="postalCode"
                           name="postalCode"
                           type="text" 
                           value={formData.postalCode}
                           onChange={handleChange}
+                          autoComplete="postal-code"
                           className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
                           placeholder="90210" 
                         />
@@ -277,7 +287,6 @@ const LeadForm: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Qualifying Questions Section */}
                 <div className="bg-slate-50/50 p-6 sm:p-10 rounded-[2.5rem] border border-slate-100">
                   <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.3em] mb-8 flex items-center">
                     <span className="w-8 h-px bg-blue-600 mr-4"></span>
@@ -285,9 +294,10 @@ const LeadForm: React.FC = () => {
                   </h3>
                   <div className="space-y-6">
                     <div className="space-y-2">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">How did you hear about us? *</label>
+                      <label htmlFor="source" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">How did you hear about us? *</label>
                       <select 
                         required
+                        id="source"
                         name="source"
                         value={formData.source}
                         onChange={handleChange}
@@ -302,9 +312,10 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">What interests you most? *</label>
+                      <label htmlFor="interest" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">What interests you most? *</label>
                       <select 
                         required
+                        id="interest"
                         name="interest"
                         value={formData.interest}
                         onChange={handleChange}
@@ -318,9 +329,10 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Current monthly advertising spend? *</label>
+                      <label htmlFor="adSpend" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Current monthly advertising spend? *</label>
                       <select 
                         required
+                        id="adSpend"
                         name="adSpend"
                         value={formData.adSpend}
                         onChange={handleChange}
@@ -335,9 +347,10 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Implementation Timeline *</label>
+                      <label htmlFor="timeline" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Implementation Timeline *</label>
                       <select 
                         required
+                        id="timeline"
                         name="timeline"
                         value={formData.timeline}
                         onChange={handleChange}
@@ -351,8 +364,9 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Biggest Challenge in Scaling? (Optional)</label>
+                      <label htmlFor="challenge" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Biggest Challenge in Scaling? (Optional)</label>
                       <textarea 
+                        id="challenge"
                         name="challenge"
                         rows={3} 
                         value={formData.challenge}
@@ -369,13 +383,14 @@ const LeadForm: React.FC = () => {
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-blue-600 py-5 rounded-2xl text-white text-xl font-black uppercase tracking-widest shadow-xl shadow-blue-200 flex items-center justify-center transition-all hover:bg-blue-700 hover:-translate-y-1 active:scale-[0.98] disabled:opacity-70 disabled:hover:translate-y-0"
+                    aria-label={isSubmitting ? "Submitting Application" : "Secure My Territory and Continue"}
                   >
                     {isSubmitting ? (
-                      <div className="h-6 w-6 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="h-6 w-6 border-4 border-white border-t-transparent rounded-full animate-spin" aria-hidden="true"></div>
                     ) : (
                       <>
                         Secure My Territory
-                        <Send className="w-5 h-5 ml-4" />
+                        <Send className="w-5 h-5 ml-4" aria-hidden="true" />
                       </>
                     )}
                   </button>
