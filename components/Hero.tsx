@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
               Let AI Book the Appointment.
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-              New leads don’t wait. Our AI calls within seconds, qualifies, and books directly to your calendar. Use your current leads—or we can run the ads too.
+              New leads don’t wait. Our AI engages leads in authentic conversations, qualifies them properly, and books directly to your calendar. Use your current leads—or we can run the ads too.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
               <a 
