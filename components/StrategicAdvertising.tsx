@@ -23,12 +23,12 @@ const StrategicAdvertising: React.FC = () => {
     <section id="strategic-ads" className="py-24 bg-[#F0F9FF] overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Main Heading */}
+        {/* Main Heading Styled to match 'The Strategic Difference' */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-6 inline-block relative">
+          <h2 className="text-4xl sm:text-5xl font-black text-slate-900 mb-6 leading-tight">
             Transform Your Lead Generation with Strategic Managed Paid Advertising
-            <div className="h-1.5 w-1/2 bg-[#2563EB] mx-auto mt-4 rounded-full"></div>
           </h2>
+          <div className="h-1.5 w-24 bg-[#2563EB] mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* Sub-sections with Visual Cards */}
@@ -62,13 +62,14 @@ const StrategicAdvertising: React.FC = () => {
           </div>
         </div>
 
-        {/* The Bloom Link Advantage - Main Feature Section */}
+        {/* The Feature Section - Renamed to Strategic Difference */}
         <div className="mb-8">
           <div className="text-center mb-16">
-            <h3 className="text-3xl font-extrabold text-slate-900 mb-4">The Bloom Link Advantage</h3>
+            <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.3em] mb-4">Advanced Systems</h3>
+            <h2 className="text-4xl font-black text-slate-900">The Strategic Difference</h2>
           </div>
 
-          {/* Static Workflow Visual - Updated Funnel */}
+          {/* Static Workflow Visual */}
           <div className="hidden lg:flex items-center justify-between mb-20 px-4">
             {[
               { label: 'Ad', icon: Share2, color: 'bg-blue-600' },
@@ -227,10 +228,10 @@ const StrategicAdvertising: React.FC = () => {
           </div>
         </div>
 
-        {/* Visual Comparison Section */}
+        {/* Visual Comparison Section - Renamed to Why Choose Bloom Link... */}
         <div className="mt-24">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-extrabold text-slate-900">The Strategic Difference</h3>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Why Choose Bloom Link for Your Real Estate Business</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-px bg-slate-200 rounded-[2rem] overflow-hidden border border-slate-200 shadow-xl">
             <div className="bg-slate-50 p-10">

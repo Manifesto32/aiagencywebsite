@@ -34,7 +34,7 @@ const HowItWorks: React.FC = () => {
             From Ad Click to <span className="text-[#2563EB]">Booked Appointment</span> in 3 Steps
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Our automated engine handles the heavy lifting of lead generation and follow-up, delivering high-intent sellers directly to your schedule.
+            Our automated engine handles the heavy lifting of lead generation and follow-up, delivering high-intent buyers and sellers directly to your schedule.:
           </p>
         </div>
 

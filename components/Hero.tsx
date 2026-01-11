@@ -8,22 +8,21 @@ const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6">
-              Stop Chasing Leads.<br />
-              Let AI Book the Appointment.
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight">
+              Stop Chasing Leads. Let AI Book the Appointment for Realtors.
             </h1>
-            <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-              New leads don’t wait. Our AI engages leads in authentic conversations, qualifies them properly, and books directly to your calendar. Use your current leads—or we can run the ads too.
+            <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+              New buyer and seller leads don't wait. Our AI engages leads in authentic conversations, qualifies them properly, and books showings directly to your calendar. Use your current leads—or we can run the ads too. Designed exclusively for real estate professionals.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
               <a 
                 href={GHL_CONFIG.formUrl}
-                className="btn-blue w-full sm:w-auto px-8 py-4 rounded-full text-white text-lg font-bold shadow-lg shadow-blue-200"
+                className="btn-blue w-full sm:w-auto px-8 py-4 rounded-full text-white text-lg font-bold shadow-lg shadow-blue-200 text-center"
               >
                 {GHL_CONFIG.buttonText} →
               </a>
             </div>
-            <div className="flex items-center justify-center lg:justify-start space-x-6 text-sm text-slate-500 font-medium">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-sm text-slate-500 font-semibold">
               <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" /> Appointment-Focused</span>
               <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" /> 24/7 AI Coverage</span>
               <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" /> Fully Managed Ads</span>
@@ -42,7 +41,7 @@ const Hero: React.FC = () => {
                     <div className="w-7 h-7 bg-[#1877F2] rounded-full flex items-center justify-center text-white ring-2 ring-white shadow-sm">
                       <Facebook className="w-4 h-4 fill-current" />
                     </div>
-                    {/* Instagram Icon with "Normal Colors" Gradient */}
+                    {/* Instagram Icon */}
                     <div className="w-7 h-7 bg-gradient-to-tr from-[#FFB13D] via-[#DD2A7B] to-[#8134AF] rounded-full flex items-center justify-center text-white ring-2 ring-white shadow-sm">
                       <Instagram className="w-4 h-4" />
                     </div>

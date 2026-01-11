@@ -7,6 +7,7 @@ import Benefits from './components/Benefits';
 import HearYourFutureAI from './components/HearYourFutureAI';
 import HowItWorks from './components/HowItWorks';
 import StrategicAdvertising from './components/StrategicAdvertising';
+import LeadQualification from './components/LeadQualification';
 import MarketInsights from './components/MarketInsights';
 import GettingStarted from './components/GettingStarted';
 import PackagesPricing from './components/PackagesPricing';
@@ -87,6 +88,7 @@ const App: React.FC = () => {
         <Hero />
         <Solutions />
         <HowItWorks />
+        <LeadQualification />
         <StrategicAdvertising />
         <Benefits />
         {/* <HearYourFutureAI /> */}
