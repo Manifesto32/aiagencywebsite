@@ -1,5 +1,5 @@
 import React from 'react';
-import { CalendarCheck, PhoneIncoming, Infinity, Settings, Megaphone } from 'lucide-react';
+import { CalendarCheck, PhoneIncoming, Megaphone } from 'lucide-react';
 
 const benefitCards = [
   {
@@ -30,26 +30,6 @@ const benefitCards = [
       "Natural conversation that qualifies motivation",
       "Qualifies timeline and property details",
       "Seamless handoff of hot leads to your phone"
-    ]
-  },
-  {
-    title: "Works Forever on Autopilot",
-    icon: Infinity,
-    description: "Set it up once, and the Appointment Generation System runs continuously without management.",
-    bullets: [
-      "AI learns and improves from every chat",
-      "No sick days, vacations, or human error",
-      "Consistent performance year-round"
-    ]
-  },
-  {
-    title: "Fully Managed by Our Team",
-    icon: Settings,
-    description: "We handle everything—from ad creation to technical AI optimization.",
-    bullets: [
-      "Custom Meta/Instagram ad campaigns",
-      "Full CRM and tech stack integration",
-      "Weekly performance reports & strategy calls"
     ]
   }
 ];

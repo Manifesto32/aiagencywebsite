@@ -23,13 +23,13 @@ const Hero: React.FC = () => {
               </a>
             </div>
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-sm text-slate-500 font-semibold">
-              <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" /> Appointment-Focused</span>
-              <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" /> 24/7 AI Coverage</span>
-              <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" /> Fully Managed Ads</span>
+              <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" aria-hidden="true" /> Appointment-Focused</span>
+              <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" aria-hidden="true" /> 24/7 AI Coverage</span>
+              <span className="flex items-center"><CheckCircle className="w-4 h-4 text-green-500 mr-2" aria-hidden="true" /> Fully Managed Ads</span>
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative" aria-label="Visual representation of the AI lead conversion process">
             {/* Visual Dialer Mockup - Designed as a Flow */}
             <div className="relative z-10 bg-white rounded-3xl shadow-2xl border border-slate-100 p-4 sm:p-6 max-w-md mx-auto space-y-4">
               
@@ -39,18 +39,18 @@ const Hero: React.FC = () => {
                   <div className="flex -space-x-1.5">
                     {/* Facebook Icon */}
                     <div className="w-7 h-7 bg-[#1877F2] rounded-full flex items-center justify-center text-white ring-2 ring-white shadow-sm">
-                      <Facebook className="w-4 h-4 fill-current" />
+                      <Facebook className="w-4 h-4 fill-current" aria-label="Facebook ad source" />
                     </div>
                     {/* Instagram Icon */}
                     <div className="w-7 h-7 bg-gradient-to-tr from-[#FFB13D] via-[#DD2A7B] to-[#8134AF] rounded-full flex items-center justify-center text-white ring-2 ring-white shadow-sm">
-                      <Instagram className="w-4 h-4" />
+                      <Instagram className="w-4 h-4" aria-label="Instagram ad source" />
                     </div>
                   </div>
                   <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-100/50 px-2 py-0.5 rounded-md">Ad Performance: High</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="h-10 w-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-100">
-                    <MessageSquare className="w-5 h-5 text-blue-600" />
+                    <MessageSquare className="w-5 h-5 text-blue-600" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">New Seller Lead • Just Now</p>
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center">
                     <div className="h-10 w-10 bg-white rounded-full flex items-center justify-center shadow-md">
-                      <Phone className="w-5 h-5 text-[#2563EB] animate-pulse" />
+                      <Phone className="w-5 h-5 text-[#2563EB] animate-pulse" aria-hidden="true" />
                     </div>
                     <div className="ml-3">
                       <p className="text-[10px] font-bold text-[#2563EB] uppercase tracking-widest leading-none">AI Agent Calling...</p>
@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
               {/* Step 3: Appointment Booked */}
               <div className="flex items-center space-x-4 p-4 rounded-2xl border-2 border-green-200 bg-green-50 shadow-sm animate-in fade-in slide-in-from-right-12 duration-1000 delay-700">
                 <div className="h-10 w-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-200">
-                  <Calendar className="w-5 h-5 text-white" />
+                  <Calendar className="w-5 h-5 text-white" aria-hidden="true" />
                 </div>
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
@@ -102,8 +102,8 @@ const Hero: React.FC = () => {
             </div>
             
             {/* Background Decorations */}
-            <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#F0F9FF] rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10 animate-blob"></div>
-            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10 animate-blob animation-delay-2000"></div>
+            <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#F0F9FF] rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10 animate-blob" aria-hidden="true"></div>
+            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -z-10 animate-blob animation-delay-2000" aria-hidden="true"></div>
           </div>
         </div>
       </div>
