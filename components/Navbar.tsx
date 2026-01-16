@@ -19,10 +19,11 @@ const Navbar: React.FC<NavbarProps> = ({ onLogoClick }) => {
             <Logo className="h-10 sm:h-12" />
           </button>
           
-          <div className="hidden md:flex items-center space-x-8 text-sm font-bold text-slate-600" role="menubar">
+          <div className="hidden md:flex items-center space-x-6 text-sm font-bold text-slate-600" role="menubar">
             <a href="/#how-it-works" className="hover:text-[#2563EB] transition-colors" role="menuitem">How It Works</a>
-            <a href="/#benefits" className="hover:text-[#2563EB] transition-colors" role="menuitem">Benefits</a>
+            <a href="/#ai-qualification" className="hover:text-[#2563EB] transition-colors" role="menuitem">AI Appointment Setter</a>
             <a href="/#strategic-ads" className="hover:text-[#2563EB] transition-colors" role="menuitem">Strategic Ads</a>
+            <a href="/#benefits" className="hover:text-[#2563EB] transition-colors" role="menuitem">Benefits</a>
             <a href="/#faq" className="hover:text-[#2563EB] transition-colors" role="menuitem">FAQ</a>
           </div>
 
