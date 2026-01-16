@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
               Stop Chasing Leads. Let AI Book the Appointment for Realtors.
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
-              New buyer and seller leads don't wait. Our AI engages leads in authentic conversations, qualifies them properly, and books showings directly to your calendar. Use your current leads—or we can run the ads too. Designed exclusively for real estate professionals.
+              Our AI engages leads in authentic conversations, qualifies them properly, and books showings directly to your calendar. Use your current leads—or we can run the ads too.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
               <a 
