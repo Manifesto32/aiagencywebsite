@@ -1,9 +1,7 @@
 import React from 'react';
 import { 
   BarChart3, 
-  Target,
-  CheckCircle2,
-  XCircle
+  Target
 } from 'lucide-react';
 
 const StrategicAdvertising: React.FC = () => {
@@ -20,9 +18,9 @@ const StrategicAdvertising: React.FC = () => {
         </div>
 
         {/* Sub-sections with Visual Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 gap-8 mb-24">
           {/* Card 1 - The Market Reality */}
-          <div className="bg-white rounded-[2.5rem] p-8 sm:p-10 shadow-xl shadow-blue-100/50 relative overflow-hidden group">
+          <div className="bg-white rounded-[2.5rem] p-8 sm:p-10 shadow-xl shadow-blue-100/50 relative overflow-hidden group border border-slate-100">
             <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
               <BarChart3 className="w-32 h-32 text-[#2563EB]" />
             </div>
@@ -36,7 +34,7 @@ const StrategicAdvertising: React.FC = () => {
           </div>
 
           {/* Card 2 - From Passive to Proactive */}
-          <div className="bg-white rounded-[2.5rem] p-8 sm:p-10 shadow-xl shadow-blue-100/50 relative overflow-hidden group">
+          <div className="bg-white rounded-[2.5rem] p-8 sm:p-10 shadow-xl shadow-blue-100/50 relative overflow-hidden group border border-slate-100">
             <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
               <Target className="w-32 h-32 text-[#2563EB]" />
             </div>
@@ -50,50 +48,82 @@ const StrategicAdvertising: React.FC = () => {
           </div>
         </div>
 
-        {/* RESTORED: Why Choose Bloom Link section */}
-        <div className="mt-24">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Why Choose Bloom Link for Your Real Estate Business</h2>
+        {/* NEW TABLE DESIGN: Why Choose Bloom Link section */}
+        <div className="mt-24 max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+              Why Choose Bloom Link for Your <br className="hidden sm:block" /> Real Estate Business
+            </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-px bg-slate-200 rounded-[2rem] overflow-hidden border border-slate-200 shadow-xl">
-            <div className="bg-slate-50 p-10">
-              <h4 className="text-xl font-bold text-slate-400 mb-8 flex items-center uppercase tracking-widest">
-                Traditional Approach
-              </h4>
-              <ul className="space-y-6">
-                {[
-                  { text: 'Generic, uninspired ads', icon: XCircle },
-                  { text: 'Basic, clunky contact forms', icon: XCircle },
-                  { text: 'Slow, manual follow-up', icon: XCircle },
-                  { text: 'Inconsistent, unpredictable results', icon: XCircle }
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-center text-slate-500">
-                    <item.icon className="w-5 h-5 mr-4 text-slate-300" />
-                    <span className="font-medium">{item.text}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-white p-10 relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-4">
-                <div className="bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter shadow-lg">Proven</div>
-              </div>
-              <h4 className="text-xl font-black text-blue-600 mb-8 flex items-center uppercase tracking-widest">
-                The Bloom Link System
-              </h4>
-              <ul className="space-y-6">
-                {[
-                  { text: 'Value-driven, custom ads', icon: CheckCircle2 },
-                  { text: 'Optimized high-conversion forms', icon: CheckCircle2 },
-                  { text: 'Instant AI-powered voice agent', icon: CheckCircle2 },
-                  { text: 'Systematic, scalable process', icon: CheckCircle2 }
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-center text-slate-900">
-                    <item.icon className="w-5 h-5 mr-4 text-blue-600" />
-                    <span className="font-bold">{item.text}</span>
-                  </li>
-                ))}
-              </ul>
+
+          <div className="bg-white rounded-[2rem] sm:rounded-[3rem] overflow-hidden border border-slate-200 shadow-2xl">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="border-b border-slate-100">
+                    <th className="px-6 sm:px-12 py-8 text-lg sm:text-xl font-bold text-slate-400 w-1/2">
+                      Traditional Lead Gen
+                    </th>
+                    <th className="px-6 sm:px-12 py-8 text-lg sm:text-xl font-black text-slate-900 w-1/2">
+                      The Bloom Link System
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100">
+                  {/* Row 1: Speed to Lead */}
+                  <tr>
+                    <td className="px-6 sm:px-12 py-10 align-top">
+                      <p className="text-base sm:text-lg text-slate-600">
+                        <span className="font-black text-slate-900">Speed to Lead:</span> 30+ minutes (Lead is cold)
+                      </p>
+                    </td>
+                    <td className="px-6 sm:px-12 py-10 align-top bg-blue-50/30">
+                      <p className="text-base sm:text-lg text-slate-900">
+                        <span className="font-black">Speed to Lead:</span> &lt; 60 seconds (Instant engagement)
+                      </p>
+                    </td>
+                  </tr>
+                  {/* Row 2: Follow-up */}
+                  <tr>
+                    <td className="px-6 sm:px-12 py-10 align-top">
+                      <p className="text-base sm:text-lg text-slate-600">
+                        <span className="font-black text-slate-900">Follow-up:</span> Manual texts, easily forgotten
+                      </p>
+                    </td>
+                    <td className="px-6 sm:px-12 py-10 align-top bg-blue-50/30">
+                      <p className="text-base sm:text-lg text-slate-900">
+                        <span className="font-black">Follow-up:</span> 24/7 AI Nurture (Never misses a beat)
+                      </p>
+                    </td>
+                  </tr>
+                  {/* Row 3: Qualification */}
+                  <tr>
+                    <td className="px-6 sm:px-12 py-10 align-top">
+                      <p className="text-base sm:text-lg text-slate-600">
+                        <span className="font-black text-slate-900">Qualification:</span> You waste time on "Lookie-loos"
+                      </p>
+                    </td>
+                    <td className="px-6 sm:px-12 py-10 align-top bg-blue-50/30">
+                      <p className="text-base sm:text-lg text-slate-900">
+                        <span className="font-black">Qualification:</span> Only pre-vetted leads hit your cal
+                      </p>
+                    </td>
+                  </tr>
+                  {/* Row 4: Result */}
+                  <tr>
+                    <td className="px-6 sm:px-12 py-10 align-top">
+                      <p className="text-base sm:text-lg text-slate-600">
+                        <span className="font-black text-slate-900">Result:</span> $0 commission from missed calls
+                      </p>
+                    </td>
+                    <td className="px-6 sm:px-12 py-10 align-top bg-blue-50/30">
+                      <p className="text-base sm:text-lg text-slate-900">
+                        <span className="font-black">Result:</span> Consistent pipeline of listing appts
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
