@@ -3,33 +3,33 @@ import { CalendarCheck, PhoneIncoming, Megaphone, Infinity } from 'lucide-react'
 
 const benefitCards = [
   {
-    title: "Meta & Instagram Ad Campaigns",
+    title: "Professional Ad Campaigns That Convert",
     icon: Megaphone,
-    description: "Done-for-you advertising targeting ready-to-move prospects.",
+    description: "Done-for-you Meta & Instagram advertising targeting ready-to-move prospects.",
     bullets: [
-      "Custom ad creative and brand focus",
-      "Proven buyer/seller templates",
-      "Daily optimization for low CPL"
+      "Custom ad creative featuring your brand and listings",
+      "Proven templates for both buyer and seller campaigns",
+      "Daily optimization for lower cost-per-lead"
     ]
   },
   {
-    title: "Appointments Auto-Booked",
+    title: "Appointments Auto-Booked with Your Calendar",
     icon: CalendarCheck,
-    description: "Qualified seller leads scheduled directly into your calendar.",
+    description: "Qualified seller leads scheduled directly into your preferred calendar.",
     bullets: [
-      "Google/Calendly two-way sync",
+      "Two-way sync with Google Calendar or Calendly",
       "No manual data entry required",
-      "Auto reminder texts sent to leads"
+      "Automatic reminder texts sent to leads"
     ]
   },
   {
-    title: "Instant Qualification",
+    title: "Instant Dial for Every Lead",
     icon: PhoneIncoming,
-    description: "Conversation flows that feel natural and human - 24/7 engagement.",
+    description: "Structured conversation flows that feel natural and human - your leads won't know they're talking to AI",
     bullets: [
-      "Qualifies motivation and timeline",
-      "Collects key property details",
-      "Seamless phone handoff"
+      "Natural conversation that qualifies motivation",
+      "Qualifies timeline and property details",
+      "Seamless handoff of hot leads to your phone"
     ]
   },
   {
@@ -37,40 +37,40 @@ const benefitCards = [
     icon: Infinity,
     description: "A system that scales without increasing your personal workload.",
     bullets: [
-      "24/7/365 lead engagement",
+      "24/7/365 lead engagement and qualification",
       "Never takes a sick day or holiday",
-      "Peak performance at any volume"
+      "Maintains peak performance regardless of volume"
     ]
   }
 ];
 
 const Benefits: React.FC = () => {
   return (
-    <section id="benefits" className="py-16 bg-slate-50">
+    <section id="benefits" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
-            Your Complete Generation System
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+            Your Complete Appointment Generation System
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            From ads to qualified appointments—we handle the tech, you handle the deals.
+          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            From social media ads to qualified appointments in your calendar—we handle the technology, you handle the conversations.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {benefitCards.map((benefit, idx) => (
-            <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 transition-all hover:shadow-md flex flex-col h-full group">
-              <div className="h-1 bg-blue-50 group-hover:bg-[#2563EB] transition-colors"></div>
-              <div className="p-6 sm:p-8 flex-1">
-                <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
-                  <benefit.icon className="w-5 h-5 text-[#2563EB]" />
+            <div key={idx} className="bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-200 transition-all hover:shadow-xl hover:-translate-y-1 flex flex-col h-full group">
+              <div className="h-2 bg-[#F0F9FF] group-hover:bg-[#2563EB] transition-colors"></div>
+              <div className="p-8 sm:p-10 flex-1">
+                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <benefit.icon className="w-7 h-7 text-[#2563EB]" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{benefit.title}</h3>
-                <p className="text-xs text-slate-600 mb-6 leading-relaxed">{benefit.description}</p>
-                <ul className="space-y-2.5">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">{benefit.title}</h3>
+                <p className="text-slate-600 mb-8 text-base leading-relaxed">{benefit.description}</p>
+                <ul className="space-y-4">
                   {benefit.bullets.map((bullet, bIdx) => (
-                    <li key={bIdx} className="flex items-start text-xs text-slate-700 font-medium">
-                      <span className="text-[#2563EB] mr-2 font-bold">✓</span>
+                    <li key={bIdx} className="flex items-start text-base text-slate-700 font-medium">
+                      <span className="text-[#2563EB] mr-3 font-bold">✓</span>
                       {bullet}
                     </li>
                   ))}
