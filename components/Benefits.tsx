@@ -15,7 +15,7 @@ const benefitCards = [
   {
     title: "Appointments Auto-Booked with Your Calendar",
     icon: CalendarCheck,
-    description: "Qualified seller leads scheduled directly into your preferred calendar.",
+    description: "Qualified leads scheduled directly into your preferred calendar.",
     bullets: [
       "Two-way sync with Google Calendar or Calendly",
       "No manual data entry required",

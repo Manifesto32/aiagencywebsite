@@ -20,12 +20,12 @@ const PackagesPricing: React.FC = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           
-          {/* Package 1: AI Appointment Setter Standalone (Moved First) */}
+          {/* Package 1: AI Appointment Setter Standalone */}
           <div className="relative group">
-            <div className="relative bg-white border-4 border-slate-100 rounded-[3.5rem] p-8 sm:p-12 shadow-sm flex flex-col h-full overflow-hidden text-left">
+            <div className="relative bg-white border-4 border-slate-100 rounded-[3.5rem] p-8 sm:p-12 shadow-sm flex flex-col h-full overflow-hidden text-left hover:border-blue-100 transition-all">
               <div className="mb-8">
-                <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-50 text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                  Automation Only
+                <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] mb-6 border border-blue-100">
+                  Risk-Free Trial
                 </div>
                 <h3 className="text-3xl font-black text-slate-900 mb-2">AI Appointment Setter</h3>
                 <div className="flex flex-col mb-4">
@@ -33,8 +33,9 @@ const PackagesPricing: React.FC = () => {
                     <span className="text-4xl font-black text-slate-900">$400</span>
                     <span className="text-slate-400 font-bold uppercase tracking-widest text-xs">/ Month</span>
                   </div>
-                  <div className="text-sm font-bold text-slate-500 mt-1 uppercase tracking-wider">
-                    + $300 One-time Setup Fee
+                  <div className="text-sm font-black text-green-600 mt-1 uppercase tracking-wider flex items-center">
+                    <Sparkles className="w-4 h-4 mr-1.5" />
+                    Free 14-day trial to start
                   </div>
                 </div>
               </div>
@@ -42,7 +43,7 @@ const PackagesPricing: React.FC = () => {
               <div className="space-y-8 flex-1">
                 <div className="bg-blue-50/50 p-6 rounded-3xl border border-blue-100">
                   <p className="text-sm text-blue-700 font-bold italic leading-relaxed mb-4">
-                    "Perfect if you already have a consistent flow of leads but need a system to ensure none go cold."
+                    "Free 14-day trial — See it qualify and book appointments to your calendar."
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center text-[10px] font-black text-blue-600 uppercase tracking-[0.15em] bg-white/60 px-3 py-1.5 rounded-lg inline-flex">
@@ -75,14 +76,14 @@ const PackagesPricing: React.FC = () => {
               </div>
 
               <div className="mt-12">
-                <a href={GHL_CONFIG.formUrl} className="w-full border-4 border-slate-100 text-slate-900 py-5 rounded-2xl text-center font-black uppercase tracking-widest hover:bg-slate-50 transition-colors block">
-                  Get Started
+                <a href={GHL_CONFIG.formUrl} className="w-full bg-blue-600 text-white py-5 rounded-2xl text-center font-black uppercase tracking-widest hover:bg-blue-700 shadow-xl shadow-blue-200 transition-all block">
+                  Start Your Free Trial
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Package 2: Managed Paid Ads + AI Appointment Setter (Moved Second) */}
+          {/* Package 2: Managed Paid Ads + AI Appointment Setter */}
           <div className="relative group">
             <div className="absolute inset-0 bg-blue-600 rounded-[3rem] blur-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
             <div className="relative bg-white border border-slate-100 rounded-[3.5rem] p-8 sm:p-12 shadow-2xl shadow-blue-50 flex flex-col h-full overflow-hidden">
