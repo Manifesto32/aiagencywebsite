@@ -138,7 +138,7 @@ const LeadForm: React.FC = () => {
         
         <div className="relative bg-white rounded-[4rem] border-8 border-white shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] overflow-hidden ring-1 ring-slate-200">
           
-          <div className="bg-slate-900 py-12 sm:py-16 px-6 text-center relative overflow-hidden">
+          <div className="bg-slate-900 py-16 sm:py-20 px-8 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full filter blur-[150px] opacity-20 -mr-48 -mt-48" aria-hidden="true"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500 rounded-full filter blur-[100px] opacity-10 -ml-32 -mb-32" aria-hidden="true"></div>
             
@@ -149,30 +149,30 @@ const LeadForm: React.FC = () => {
                   Territory Registration Active
                 </div>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-blue-400 mb-6 tracking-tight leading-[1.2] uppercase">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-blue-400 mb-6 tracking-tight leading-[1.2] uppercase">
                 Secure Your Territory & <br className="hidden sm:block" /> Book a Free Consultation
               </h2>
-              <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-medium leading-relaxed mb-8 opacity-90">
+              <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-medium leading-relaxed mb-8 opacity-90">
                 Complete the form below to secure your exclusive market territory. Once submitted, you'll be redirected to our calendar to pick a time for your growth call.
               </p>
-              <div className="flex items-center justify-center text-white/60 font-bold text-[10px] tracking-widest uppercase bg-white/5 py-3 px-6 rounded-2xl border border-white/10 inline-flex">
+              <div className="flex items-center justify-center text-white/60 font-bold text-[10px] tracking-widest uppercase bg-white/5 py-4 px-8 rounded-2xl border border-white/10 inline-flex">
                 <ShieldCheck className="w-4 h-4 mr-3 text-blue-400" />
                 Secure End-to-End Encrypted Portal
               </div>
             </div>
           </div>
 
-          <div className="py-16 px-4 sm:px-12 lg:px-24 bg-white">
-            <div className="max-w-3xl mx-auto">
+          <div className="py-16 px-6 sm:px-12 lg:px-24 bg-white">
+            <div className="max-w-4xl mx-auto">
               <form onSubmit={handleSubmit} className="space-y-12" id="reservation-form">
-                <div className="bg-slate-50/50 p-6 sm:p-10 rounded-[2.5rem] border border-slate-100">
-                  <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.3em] mb-8 flex items-center">
+                <div className="bg-slate-50/50 p-8 sm:p-12 rounded-[2.5rem] border border-slate-100">
+                  <h3 className="text-sm font-black text-blue-600 uppercase tracking-[0.3em] mb-10 flex items-center">
                     <span className="w-8 h-px bg-blue-600 mr-4"></span>
                     Step 1: Identity & Contact
                   </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div className="space-y-2">
-                      <label htmlFor="firstName" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">First Name *</label>
+                      <label htmlFor="firstName" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">First Name *</label>
                       <input 
                         required 
                         id="firstName"
@@ -181,12 +181,12 @@ const LeadForm: React.FC = () => {
                         value={formData.firstName}
                         onChange={handleChange}
                         autoComplete="given-name"
-                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
                         placeholder="John" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="lastName" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Last Name *</label>
+                      <label htmlFor="lastName" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Last Name *</label>
                       <input 
                         required 
                         id="lastName"
@@ -195,12 +195,12 @@ const LeadForm: React.FC = () => {
                         value={formData.lastName}
                         onChange={handleChange}
                         autoComplete="family-name"
-                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
                         placeholder="Doe" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="email" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Email Address *</label>
+                      <label htmlFor="email" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Email Address *</label>
                       <input 
                         required 
                         id="email"
@@ -209,12 +209,12 @@ const LeadForm: React.FC = () => {
                         value={formData.email}
                         onChange={handleChange}
                         autoComplete="email"
-                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
                         placeholder="john@example.com" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="phone" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Phone Number *</label>
+                      <label htmlFor="phone" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Phone Number *</label>
                       <input 
                         required 
                         id="phone"
@@ -223,12 +223,12 @@ const LeadForm: React.FC = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         autoComplete="tel"
-                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
                         placeholder="(555) 000-0000" 
                       />
                     </div>
                     <div className="sm:col-span-2 space-y-2">
-                      <label htmlFor="organization" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Organization (Optional)</label>
+                      <label htmlFor="organization" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Organization (Optional)</label>
                       <input 
                         id="organization"
                         name="organization"
@@ -236,12 +236,12 @@ const LeadForm: React.FC = () => {
                         value={formData.organization}
                         onChange={handleChange}
                         autoComplete="organization"
-                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
                         placeholder="Agency or Brokerage Name" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="city" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">City *</label>
+                      <label htmlFor="city" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">City *</label>
                       <input 
                         required 
                         id="city"
@@ -250,13 +250,13 @@ const LeadForm: React.FC = () => {
                         value={formData.city}
                         onChange={handleChange}
                         autoComplete="address-level2"
-                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
                         placeholder="Los Angeles" 
                       />
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label htmlFor="state" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">State *</label>
+                        <label htmlFor="state" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">State *</label>
                         <input 
                           required 
                           id="state"
@@ -265,12 +265,12 @@ const LeadForm: React.FC = () => {
                           value={formData.state}
                           onChange={handleChange}
                           autoComplete="address-level1"
-                          className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
+                          className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
                           placeholder="CA" 
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="postalCode" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Postal Code *</label>
+                        <label htmlFor="postalCode" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Postal Code *</label>
                         <input 
                           required 
                           id="postalCode"
@@ -279,7 +279,7 @@ const LeadForm: React.FC = () => {
                           value={formData.postalCode}
                           onChange={handleChange}
                           autoComplete="postal-code"
-                          className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm" 
+                          className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
                           placeholder="90210" 
                         />
                       </div>
@@ -287,21 +287,21 @@ const LeadForm: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="bg-slate-50/50 p-6 sm:p-10 rounded-[2.5rem] border border-slate-100">
-                  <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.3em] mb-8 flex items-center">
+                <div className="bg-slate-50/50 p-8 sm:p-12 rounded-[2.5rem] border border-slate-100">
+                  <h3 className="text-sm font-black text-blue-600 uppercase tracking-[0.3em] mb-10 flex items-center">
                     <span className="w-8 h-px bg-blue-600 mr-4"></span>
                     Step 2: Business Goals
                   </h3>
-                  <div className="space-y-6">
+                  <div className="space-y-8">
                     <div className="space-y-2">
-                      <label htmlFor="source" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">How did you hear about us? *</label>
+                      <label htmlFor="source" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">How did you hear about us? *</label>
                       <select 
                         required
                         id="source"
                         name="source"
                         value={formData.source}
                         onChange={handleChange}
-                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-sm"
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-base"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Instagram Ads</option>
@@ -312,14 +312,14 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="interest" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">What interests you most? *</label>
+                      <label htmlFor="interest" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">What interests you most? *</label>
                       <select 
                         required
                         id="interest"
                         name="interest"
                         value={formData.interest}
                         onChange={handleChange}
-                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-sm"
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-base"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Managed Paid Ads</option>
@@ -329,14 +329,14 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="adSpend" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Current monthly advertising spend? *</label>
+                      <label htmlFor="adSpend" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Current monthly advertising spend? *</label>
                       <select 
                         required
                         id="adSpend"
                         name="adSpend"
                         value={formData.adSpend}
                         onChange={handleChange}
-                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-sm"
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-base"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Not currently running ads</option>
@@ -347,14 +347,14 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="timeline" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Implementation Timeline *</label>
+                      <label htmlFor="timeline" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Implementation Timeline *</label>
                       <select 
                         required
                         id="timeline"
                         name="timeline"
                         value={formData.timeline}
                         onChange={handleChange}
-                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-sm"
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-base"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Immediately</option>
@@ -364,37 +364,37 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="challenge" className="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Biggest Challenge in Scaling? (Optional)</label>
+                      <label htmlFor="challenge" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Biggest Challenge in Scaling? (Optional)</label>
                       <textarea 
                         id="challenge"
                         name="challenge"
-                        rows={3} 
+                        rows={4} 
                         value={formData.challenge}
                         onChange={handleChange}
-                        className="w-full px-5 py-3.5 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-sm resize-none" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base resize-none" 
                         placeholder="e.g. Inconsistent lead flow..." 
                       />
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-4">
+                <div className="pt-6">
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-blue-600 py-5 rounded-2xl text-white text-xl font-black uppercase tracking-widest shadow-xl shadow-blue-200 flex items-center justify-center transition-all hover:bg-blue-700 hover:-translate-y-1 active:scale-[0.98] disabled:opacity-70 disabled:hover:translate-y-0"
+                    className="w-full bg-blue-600 py-6 rounded-2xl text-white text-2xl font-black uppercase tracking-widest shadow-xl shadow-blue-200 flex items-center justify-center transition-all hover:bg-blue-700 hover:-translate-y-1 active:scale-[0.98] disabled:opacity-70 disabled:hover:translate-y-0"
                     aria-label={isSubmitting ? "Submitting Application" : "Secure My Territory and Continue"}
                   >
                     {isSubmitting ? (
-                      <div className="h-6 w-6 border-4 border-white border-t-transparent rounded-full animate-spin" aria-hidden="true"></div>
+                      <div className="h-8 w-8 border-4 border-white border-t-transparent rounded-full animate-spin" aria-hidden="true"></div>
                     ) : (
                       <>
                         Secure My Territory
-                        <Send className="w-5 h-5 ml-4" aria-hidden="true" />
+                        <Send className="w-6 h-6 ml-5" aria-hidden="true" />
                       </>
                     )}
                   </button>
-                  <p className="text-center text-[9px] text-slate-400 mt-5 font-bold uppercase tracking-[0.2em]">
+                  <p className="text-center text-xs text-slate-400 mt-6 font-bold uppercase tracking-[0.2em]">
                     Your information is protected. We will only contact you regarding this application.
                   </p>
                 </div>
