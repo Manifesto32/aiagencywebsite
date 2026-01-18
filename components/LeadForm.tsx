@@ -18,6 +18,7 @@ const LeadForm: React.FC = () => {
     postalCode: '',
     source: '',
     interest: '',
+    impact: '',
     adSpend: '',
     timeline: '',
     challenge: ''
@@ -54,6 +55,7 @@ const LeadForm: React.FC = () => {
       postal_code: formData.postalCode,
       lead_source: formData.source,
       service_interest: formData.interest,
+      business_impact_goal: formData.impact,
       current_ad_spend: formData.adSpend,
       implementation_timeline: formData.timeline,
       business_challenge: formData.challenge,
@@ -326,6 +328,22 @@ const LeadForm: React.FC = () => {
                         <option>AI Appointment Setter</option>
                         <option>Managed Paid Ads & AI Appointment Setter</option>
                         <option>Other AI automation</option>
+                      </select>
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="impact" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">What would have the biggest impact on your business right now if you had an AI handling your calls? *</label>
+                      <select 
+                        required
+                        id="impact"
+                        name="impact"
+                        value={formData.impact}
+                        onChange={handleChange}
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-base"
+                      >
+                        <option value="" disabled>Please select...</option>
+                        <option>Responding to leads faster (I'm getting leads but missing opportunities)</option>
+                        <option>Getting more qualified leads in the first place (I need more appointments)</option>
+                        <option>Both - I need a complete system</option>
                       </select>
                     </div>
                     <div className="space-y-2">
