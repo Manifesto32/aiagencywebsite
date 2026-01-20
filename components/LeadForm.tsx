@@ -168,13 +168,13 @@ const LeadForm: React.FC = () => {
             <div className="max-w-4xl mx-auto">
               <form onSubmit={handleSubmit} className="space-y-12" id="reservation-form">
                 <div className="bg-slate-50/50 p-8 sm:p-12 rounded-[2.5rem] border border-slate-100">
-                  <h3 className="text-sm font-black text-blue-600 uppercase tracking-[0.3em] mb-10 flex items-center">
+                  <h3 className="text-lg font-black text-blue-600 uppercase tracking-[0.3em] mb-10 flex items-center">
                     <span className="w-8 h-px bg-blue-600 mr-4"></span>
                     Step 1: Identity & Contact
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div className="space-y-2">
-                      <label htmlFor="firstName" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">First Name *</label>
+                      <label htmlFor="firstName" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">First Name *</label>
                       <input 
                         required 
                         id="firstName"
@@ -183,12 +183,12 @@ const LeadForm: React.FC = () => {
                         value={formData.firstName}
                         onChange={handleChange}
                         autoComplete="given-name"
-                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-extrabold text-lg" 
                         placeholder="John" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="lastName" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Last Name *</label>
+                      <label htmlFor="lastName" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">Last Name *</label>
                       <input 
                         required 
                         id="lastName"
@@ -197,12 +197,12 @@ const LeadForm: React.FC = () => {
                         value={formData.lastName}
                         onChange={handleChange}
                         autoComplete="family-name"
-                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-extrabold text-lg" 
                         placeholder="Doe" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="email" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Email Address *</label>
+                      <label htmlFor="email" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">Email Address *</label>
                       <input 
                         required 
                         id="email"
@@ -211,12 +211,12 @@ const LeadForm: React.FC = () => {
                         value={formData.email}
                         onChange={handleChange}
                         autoComplete="email"
-                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-extrabold text-lg" 
                         placeholder="john@example.com" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="phone" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Phone Number *</label>
+                      <label htmlFor="phone" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">Phone Number *</label>
                       <input 
                         required 
                         id="phone"
@@ -225,12 +225,12 @@ const LeadForm: React.FC = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         autoComplete="tel"
-                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-extrabold text-lg" 
                         placeholder="(555) 000-0000" 
                       />
                     </div>
                     <div className="sm:col-span-2 space-y-2">
-                      <label htmlFor="organization" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Organization (Optional)</label>
+                      <label htmlFor="organization" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">Organization (Optional)</label>
                       <input 
                         id="organization"
                         name="organization"
@@ -238,12 +238,12 @@ const LeadForm: React.FC = () => {
                         value={formData.organization}
                         onChange={handleChange}
                         autoComplete="organization"
-                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-extrabold text-lg" 
                         placeholder="Agency or Brokerage Name" 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="city" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">City *</label>
+                      <label htmlFor="city" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">City *</label>
                       <input 
                         required 
                         id="city"
@@ -252,13 +252,13 @@ const LeadForm: React.FC = () => {
                         value={formData.city}
                         onChange={handleChange}
                         autoComplete="address-level2"
-                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-extrabold text-lg" 
                         placeholder="Los Angeles" 
                       />
                     </div>
                     <div className="grid grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label htmlFor="state" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">State *</label>
+                        <label htmlFor="state" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">State *</label>
                         <input 
                           required 
                           id="state"
@@ -267,12 +267,12 @@ const LeadForm: React.FC = () => {
                           value={formData.state}
                           onChange={handleChange}
                           autoComplete="address-level1"
-                          className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
+                          className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-extrabold text-lg" 
                           placeholder="CA" 
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="postalCode" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Postal Code *</label>
+                        <label htmlFor="postalCode" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">Postal Code *</label>
                         <input 
                           required 
                           id="postalCode"
@@ -281,7 +281,7 @@ const LeadForm: React.FC = () => {
                           value={formData.postalCode}
                           onChange={handleChange}
                           autoComplete="postal-code"
-                          className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base" 
+                          className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-extrabold text-lg" 
                           placeholder="90210" 
                         />
                       </div>
@@ -290,20 +290,20 @@ const LeadForm: React.FC = () => {
                 </div>
 
                 <div className="bg-slate-50/50 p-8 sm:p-12 rounded-[2.5rem] border border-slate-100">
-                  <h3 className="text-sm font-black text-blue-600 uppercase tracking-[0.3em] mb-10 flex items-center">
+                  <h3 className="text-lg font-black text-blue-600 uppercase tracking-[0.3em] mb-10 flex items-center">
                     <span className="w-8 h-px bg-blue-600 mr-4"></span>
                     Step 2: Business Goals
                   </h3>
                   <div className="space-y-8">
                     <div className="space-y-2">
-                      <label htmlFor="source" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">How did you hear about us? *</label>
+                      <label htmlFor="source" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">How did you hear about us? *</label>
                       <select 
                         required
                         id="source"
                         name="source"
                         value={formData.source}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-base"
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-extrabold text-lg"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Instagram Ads</option>
@@ -314,14 +314,14 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="interest" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">What interests you most? *</label>
+                      <label htmlFor="interest" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">What interests you most? *</label>
                       <select 
                         required
                         id="interest"
                         name="interest"
                         value={formData.interest}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-base"
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-extrabold text-lg"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Managed Paid Ads</option>
@@ -331,14 +331,14 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="impact" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">What would have the biggest impact on your business right now if you had an AI handling your calls? *</label>
+                      <label htmlFor="impact" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">What would have the biggest impact on your business right now if you had an AI handling your calls? *</label>
                       <select 
                         required
                         id="impact"
                         name="impact"
                         value={formData.impact}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-base"
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-extrabold text-lg"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Responding to leads faster (I'm getting leads but missing opportunities)</option>
@@ -347,14 +347,14 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="adSpend" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Current monthly advertising spend? *</label>
+                      <label htmlFor="adSpend" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">Current monthly advertising spend? *</label>
                       <select 
                         required
                         id="adSpend"
                         name="adSpend"
                         value={formData.adSpend}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-base"
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-extrabold text-lg"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Not currently running ads</option>
@@ -365,14 +365,14 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="timeline" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Implementation Timeline *</label>
+                      <label htmlFor="timeline" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">Implementation Timeline *</label>
                       <select 
                         required
                         id="timeline"
                         name="timeline"
                         value={formData.timeline}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-bold text-base"
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none bg-white text-slate-900 font-extrabold text-lg"
                       >
                         <option value="" disabled>Please select...</option>
                         <option>Immediately</option>
@@ -382,14 +382,14 @@ const LeadForm: React.FC = () => {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="challenge" className="block text-xs font-black text-slate-900 uppercase tracking-widest ml-1">Biggest Challenge in Scaling? (Optional)</label>
+                      <label htmlFor="challenge" className="block text-sm font-black text-slate-900 uppercase tracking-widest ml-1">Biggest Challenge in Scaling? (Optional)</label>
                       <textarea 
                         id="challenge"
                         name="challenge"
                         rows={4} 
                         value={formData.challenge}
                         onChange={handleChange}
-                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-100 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-bold text-base resize-none" 
+                        className="w-full px-6 py-4 rounded-xl border-2 border-slate-200 bg-white focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 transition-all outline-none text-slate-900 font-extrabold text-lg resize-none" 
                         placeholder="e.g. Inconsistent lead flow..." 
                       />
                     </div>

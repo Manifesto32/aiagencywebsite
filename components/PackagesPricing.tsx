@@ -33,8 +33,8 @@ const PackagesPricing: React.FC = () => {
                     <span className="text-4xl font-black text-slate-900">$400</span>
                     <span className="text-slate-400 font-bold uppercase tracking-widest text-xs">/ Month</span>
                   </div>
-                  <div className="text-sm font-black text-green-600 mt-1 uppercase tracking-wider flex items-center">
-                    <Sparkles className="w-4 h-4 mr-1.5" />
+                  <div className="text-lg font-black text-green-600 mt-2 uppercase tracking-wider flex items-center">
+                    <Sparkles className="w-5 h-5 mr-2" />
                     Free 14-day trial to start
                   </div>
                 </div>
@@ -163,7 +163,7 @@ const PackagesPricing: React.FC = () => {
           <div className="relative z-10">
             <h3 className="text-2xl sm:text-3xl font-black mb-6">Need a Custom Strategy?</h3>
             <p className="text-lg text-slate-400 font-medium leading-relaxed mb-10">
-              If you’re aiming for higher appointment targets, expanding into multiple markets, adding new agent teams, or want to scale your ad spend + booking volume, we can hop on a quick call to map out the right strategy and build a custom plan for your growth goals.
+              Whether you're working with a limited budget and need maximum efficiency, ready to scale your booking volume across multiple markets, or anywhere in between - we can hop on a quick call to map out the right strategy that fits your goals and budget.
             </p>
             <a href={GHL_CONFIG.formUrl} className="inline-flex items-center btn-blue px-10 py-5 rounded-2xl text-white font-black uppercase tracking-widest">
               Book Your Growth Call →
